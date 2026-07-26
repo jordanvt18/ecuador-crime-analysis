@@ -1,0 +1,4 @@
+indicator,crime_metric,pearson_r,pearson_p,spearman_r,spearman_p,significant
+tasa_pobreza_pct,homicide_rate,0.1056,0.4519,0.2104,0.1305,NO
+gini,homicide_rate,0.2745,0.0467,0.2246,0.1059,YES
+anios_escolaridad,homicide_rate,-0.0296,0.8335,-0.1765,0.2062,NO

@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "features": [],
+  "_note": "Replace with geoportaligm.gob.ec or GADM Ecuador province shapefile (.shp/.geojson)",
+  "_source_urls": [
+    "https://www.geoportaligm.gob.ec/portal/index.php/descargas/",
+    "https://gadm.org/download_country_v3.html (ECU)"
+  ]
+}

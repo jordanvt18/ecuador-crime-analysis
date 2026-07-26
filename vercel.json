@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "ecuador-crime-reality",
+  "builds": [
+    { "src": "dashboard/assets/geospatial_story.html", "use": "@vercel/static" },
+    { "src": "dashboard/assets/*.html", "use": "@vercel/static" },
+    { "src": "dashboard/assets/*.png", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/dashboard/assets/geospatial_story.html" },
+    { "src": "/(.*)", "dest": "/dashboard/assets/$1" }
+  ]
+}

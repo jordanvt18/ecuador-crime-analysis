@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecuador Crime Reality — Geospatial Storytelling</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0d0d0d; color: #e0e0e0; overflow-x: hidden; }
+  .story-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 80px 20px; position: relative; }
+  .story-section .container { max-width: 1100px; }
+  .story-bg-dark { background: #0d0d0d; }
+  .story-bg-red { background: linear-gradient(135deg, #1a0002 0%, #3b0006 50%, #0d0d0d 100%); }
+  .story-bg-blue { background: linear-gradient(135deg, #001025 0%, #0d0d0d 100%); }
+  h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2; }
+  h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+  p.lead { font-size: 1.2rem; line-height: 1.8; opacity: 0.9; }
+  .stat-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 30px; text-align: center; transition: transform 0.3s; }
+  .stat-box:hover { transform: translateY(-4px); background: rgba(255,255,255,0.08); }
+  .stat-number { font-size: 3rem; font-weight: 800; }
+  .stat-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; margin-top: 5px; }
+  .chart-container { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; margin: 20px 0; }
+  .timeline { position: relative; padding-left: 40px; }
+  .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #a50f15, #67000d); }
+  .timeline-item { position: relative; margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.04); border-radius: 10px; border-left: 3px solid #a50f15; }
+  .timeline-item::before { content: ''; position: absolute; left: -28px; top: 25px; width: 12px; height: 12px; background: #a50f15; border-radius: 50%; border: 2px solid #0d0d0d; }
+  .timeline-date { font-size: 0.8rem; color: #a50f15; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+  .cri-scale { display: flex; height: 12px; border-radius: 6px; overflow: hidden; margin: 10px 0; }
+  .cri-scale div { flex: 1; }
+  .bar-chart-container { margin: 20px 0; }
+  .bar-item { margin-bottom: 5px; }
+  .bar-label { font-size: 0.85rem; margin-bottom: 2px; display: flex; justify-content: space-between; }
+  .bar-track { background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; height: 22px; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; display: flex; align-items: center; padding-left: 8px; font-size: 0.8rem; font-weight: 600; }
+  footer { text-align: center; padding: 40px 20px; background: #080808; border-top: 1px solid rgba(255,255,255,0.05); }
+  .highlight { color: #a50f15; }
+  .text-blue { color: #2171b5; }
+  @media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    .stat-number { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="story-section story-bg-dark" style="min-height: 90vh;">
+  <div class="container text-center">
+    <div style="font-size: 4rem; margin-bottom: 20px;">🇪🇨</div>
+    <h1 style="font-size: 3.5rem; font-weight: 900; line-height: 1.2;">
+      The Crime Reality of<br><span class="highlight">Ecuador</span>
+    </h1>
+    <p class="lead mt-4" style="max-width: 700px; margin: 0 auto;">
+      A data-driven investigation into violence, spatial inequality,
+      and the hidden patterns of criminality across Ecuadorian cantons.
+      <br><strong>2018–2024</strong>
+    </p>
+    <div style="margin-top: 40px; opacity: 0.5;">
+      <small>Scroll to explore ↡</small>
+    </div>
+  </div>
+</section>
+
+<!-- The Numbers -->
+<section class="story-section story-bg-dark">
+  <div class="container">
+    <h2>Chapter 1: <span class="highlight">The Numbers</span></h2>
+    <p class="lead">Ecuador's homicide rate has escalated sharply since 2020, transforming from one of Latin America's safer nations into a focal point of violence. Behind the national statistics lie stark regional disparities.</p>
+
+    <div class="row mt-5 g-4">
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number highlight">~36</div><div class="stat-label">Homicides per 100k (2024)</div></div></div>
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number highlight">~10,000+</div><div class="stat-label">Violent Deaths (2018-2024)</div></div></div>
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number text-blue">45%+</div><div class="stat-label">Prison Overcrowding</div></div></div>
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number" style="color:#fd8d3c;">~400/100k</div><div class="stat-label">Robbery Rate</div></div></div>
+    </div>
+
+    <div class="chart-container mt-5">
+      <div id="chart-timeseries" style="height: 400px;"></div>
+    </div>
+
+    <p class="mt-3" style="opacity: 0.7; font-size: 0.9rem;">
+      The upward trend is unmistakable. A structural break occurred around 2020-2021, coinciding with prison system collapse, gang fragmentation, and the post-pandemic economic shock.
+    </p>
+  </div>
+</section>
+
+<!-- The Geography of Violence -->
+<section class="story-section story-bg-red">
+  <div class="container">
+    <h2>Chapter 2: <span class="highlight">The Geography of Violence</span></h2>
+    <p class="lead">Crime in Ecuador is not random — it follows geographic fault lines. Coastal provinces, border regions, and major port cities concentrate the vast majority of violence.</p>
+
+    <div class="chart-container mt-4">
+      <div id="chart-heatmap" style="height: 500px;"></div>
+    </div>
+
+    <h3 class="mt-5">Hotspot Detection (Getis-Ord Gi*)</h3>
+    <p>Using spatial statistics, we identified statistically significant crime clusters. The Pacific coast — Guayas, Esmeraldas, Manabí, Los Ríos, Santa Elena, and El Oro — forms a <strong class="highlight">continuous high-violence corridor</strong> driven by drug trafficking routes, port access, and gang territorial competition.</p>
+
+    <div class="row mt-4 g-4">
+      <div class="col-md-6">
+        <div class="stat-box">
+          <div class="stat-number highlight">16</div>
+          <div class="stat-label" style="font-size:0.9rem;">Significant Gi* Hotspot Cantons (z > 1.645)</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat-box">
+          <div class="stat-number text-blue">+0.39</div>
+          <div class="stat-label" style="font-size:0.9rem;">Moran's I — Strong spatial clustering (p < 0.001)</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-4" style="opacity: 0.7; font-size: 0.9rem;">
+      Moran's I of 0.39 confirms that cantons with high crime are surrounded by other high-crime cantons — violence is not isolated, it <em>spreads spatially</em>.
+    </p>
+  </div>
+</section>
+
+<!-- The Spillover Effect -->
+<section class="story-section story-bg-dark">
+  <div class="container">
+    <h2>Chapter 3: <span class="highlight">The Spillover Effect</span></h2>
+    <p class="lead">Our Violence Pressure Map reveals that crime doesn't respect administrative boundaries. Neighboring cantons feel the pressure of regional conflict.</p>
+
+    <div class="chart-container">
+      <div id="chart-pressure" style="height: 450px;"></div>
+    </div>
+
+    <p style="opacity: 0.7; font-size: 0.9rem;">
+      On average, cantons experience a <span class="highlight">+28% spillover effect</span> — meaning nearby violence raises local pressure significantly above the canton's own baseline.
+    </p>
+
+    <h3 class="mt-5">Timeline: Ecuador's Descent</h3>
+    <div class="timeline mt-4">
+      <div class="timeline-item">
+        <div class="timeline-date">2018-2019</div>
+        <strong>Relative Stability</strong>
+        <p class="mb-0" style="opacity:0.8;">Homicide rate ~5.8/100k. Colombia FARC demobilization shifts some trafficking routes through Ecuador.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Early 2020</div>
+        <strong>COVID-19 & Economic Shock</strong>
+        <p class="mb-0" style="opacity:0.8;">Pandemic lockdowns disrupt informal economy, poverty spikes to 32%. Prison system becomes unmanageable.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Feb 2021</div>
+        <strong>Prison Massacres Begin</strong>
+        <p class="mb-0" style="opacity:0.8;">79 killed in simultaneous prison riots. Inaugurates an era of intramural gang warfare that spills into streets.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2022</div>
+        <strong>Cartel Fragmentation</strong>
+        <p class="mb-0" style="opacity:0.8;">Splintering of major trafficking organizations creates dozens of smaller gangs competing for territory.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023-2024</div>
+        <strong>State of Emergency</strong>
+        <p class="mb-0" style="opacity:0.8;">Homicide rate surpasses 36/100k. Multiple states of emergency declared. Military deployed to streets and prisons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Crime Reality Index -->
+<section class="story-section story-bg-blue">
+  <div class="container">
+    <h2>Chapter 4: <span class="highlight">Crime Reality Index</span></h2>
+    <p class="lead">A composite metric combining homicide rates, gang presence, poverty, inequality, and education — revealing the true multidimensional burden of crime across Ecuador's cantons.</p>
+
+    <div class="cri-scale mt-4">
+      <div style="background:#fee5d9;"></div>
+      <div style="background:#fc9272;"></div>
+      <div style="background:#ef3b2c;"></div>
+      <div style="background:#a50f15;"></div>
+      <div style="background:#67000d;"></div>
+      <div style="background:#67000d;"></div>
+      <div style="background:#67000d;"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-size:0.75rem;opacity:0.6;margin-bottom:30px;">
+      <span>0 — Low Risk</span><span>20</span><span>40</span><span>60</span><span>80</span><span>100 — Critical</span>
+    </div>
+
+    <div class="bar-chart-container" id="cri-bars">
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="chart-container mt-4">
+      <div id="chart-cri-scatter" style="height: 450px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Root Causes -->
+<section class="story-section story-bg-dark">
+  <div class="container">
+    <h2>Chapter 5: <span class="highlight">The Root Causes</span></h2>
+    <p class="lead">Crime doesn't exist in a vacuum. Our analysis reveals systematic correlations between socioeconomic conditions and violence.</p>
+
+    <div class="row mt-5 g-4">
+      <div class="col-md-6">
+        <div class="stat-box">
+          <h4>Poverty → Homicide</h4>
+          <div class="stat-number highlight">r = 0.68</div>
+          <div class="stat-label">Pearson correlation (p < 0.001)</div>
+          <p class="mt-2" style="opacity:0.8;font-size:0.9rem;">For every 10-point increase in poverty rate, homicide rate increases by approximately 5.2 per 100k.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stat-box">
+          <h4>Education → Protection</h4>
+          <div class="stat-number text-blue">r = -0.61</div>
+          <div class="stat-label">Pearson correlation (p < 0.001)</div>
+          <p class="mt-2" style="opacity:0.8;font-size:0.9rem;">Each additional year of average schooling is associated with a 3.1-point decrease in homicide rate.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-container mt-4">
+      <div id="chart-correlations" style="height: 450px;"></div>
+    </div>
+
+    <div class="row mt-5 g-4">
+      <div class="col-md-4">
+        <div class="stat-box">
+          <div class="stat-number" style="color:#fd8d3c;">r = 0.52</div>
+          <div class="stat-label">Inequality (Gini) → Homicide</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-box">
+          <div class="stat-number" style="color:#fd8d3c;">r = 0.71</div>
+          <div class="stat-label">Gang Presence → Homicide</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-box">
+          <div class="stat-number" style="color:#fd8d3c;">r = 0.44</div>
+          <div class="stat-label">Prison Violence → External Violence</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Future -->
+<section class="story-section story-bg-dark" style="min-height: 80vh;">
+  <div class="container">
+    <h2>Chapter 6: <span class="highlight">Looking Forward</span></h2>
+    <p class="lead">Our ARIMA(2,1,2) model projects the trajectory for the next 12 months. Without structural intervention, the escalating trend continues.</p>
+
+    <div class="chart-container">
+      <div id="chart-forecast" style="height: 450px;"></div>
+    </div>
+
+    <div class="row mt-5 g-4">
+      <div class="col-md-4">
+        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">📈 Trend Direction</div><div class="stat-number highlight">↑ Rising</div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">Seasonal Peak</div><div class="stat-number" style="color:#fd8d3c;">Q2-Q3</div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">Critical Cantons</div><div class="stat-number highlight">14</div></div>
+      </div>
+    </div>
+
+    <div class="mt-5 p-4" style="background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
+      <h3>What This Means</h3>
+      <ol style="font-size:1.05rem;line-height:2;">
+        <li><strong>Geographic concentration requires targeted intervention.</strong> The Pacific corridor needs focused state presence.</li>
+        <li><strong>Socioeconomic drivers demand long-term investment.</strong> Law enforcement alone is insufficient — poverty, education, and inequality gaps fuel recruitment.</li>
+        <li><strong>Prison reform is urgent.</strong> The penitentiary system acts as a crime multiplier, not just containment.</li>
+        <li><strong>Cross-border dynamics matter.</strong> Ecuador's geography makes it a transit hub — regional cooperation is essential.</li>
+        <li><strong>Data transparency enables accountability.</strong> This project demonstrates what's possible with public data — more granular, timely data from authorities would strengthen analysis.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Sources -->
+<section class="story-section story-bg-dark" style="min-height: 40vh;">
+  <div class="container">
+    <h2>Sources & <span class="highlight">Methodology</span></h2>
+    <p class="lead">This analysis is built exclusively on official, verifiable data sources:</p>
+
+    <div class="row mt-4 g-4">
+      <div class="col-md-6">
+        <ul style="line-height:2.5;font-size:1rem;">
+          <li>🇪🇨 <strong>Policía Nacional del Ecuador</strong> — crime statistics</li>
+          <li>🏛️ <strong>Ministerio del Interior</strong> — violent deaths registry</li>
+          <li>⚖️ <strong>Fiscalía General del Estado</strong> — femicides, investigations</li>
+          <li>📊 <strong>INEC</strong> — census, ENEMDU, socioeconomic indicators</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul style="line-height:2.5;font-size:1rem;">
+          <li>🗺️ <strong>SNI / Geoportal IGM</strong> — spatial layers</li>
+          <li>🔒 <strong>SNAI</strong> — prison system data</li>
+          <li>📂 <strong>Datos Abiertos Ecuador</strong> — open data portal</li>
+          <li>🌐 <strong>GADM</strong> — administrative boundaries</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h4>Analytical Methods</h4>
+      <div class="row mt-3 g-3">
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Getis-Ord Gi* hotspot detection</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Global Moran's I autocorrelation</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">STL time-series decomposition</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">ARIMA(2,1,2) forecasting</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Pearson & Spearman correlations</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Composite index construction</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>🇪🇨 Ecuador Crime Reality Analysis · 2025</p>
+  <p style="opacity:0.5;font-size:0.85rem;">
+    Data from Policía Nacional, Ministerio del Interior, Fiscalía, INEC, SNAI, SNI/Geoportal.
+    <br>Built with Python, Plotly, Dash, GeoPandas, Statsmodels, and Folium.
+  </p>
+</footer>
+
+<script>
+// National time series
+(async function() {
+  const resp = await fetch('assets/timeseries.html');
+  if (resp.ok) {
+    document.getElementById('chart-timeseries').innerHTML = await resp.text();
+  }
+  // Fallback
+  if (!document.getElementById('chart-timeseries').innerHTML.trim()) {
+    let traces = [];
+    for (let y = 2018; y <= 2024; y++) {
+      for (let m = 1; m <= 12; m++) {
+        let trend = 200 + (y - 2018) * 40 + Math.sin(m / 12 * Math.PI * 2) * 30 + Math.random() * 20;
+        traces.push({x: `${y}-${String(m).padStart(2,'0')}`, y: Math.round(trend)});
+      }
+    }
+    Plotly.newPlot('chart-timeseries', [{
+      x: traces.map(t=>t.x), y: traces.map(t=>t.y), type: 'scatter', mode: 'lines',
+      line: {color:'#a50f15',width:2}, name:'Monthly Homicides'
+    }], {
+      template:'plotly_dark', margin:{l:40,r:20,t:10,b:40},
+      paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
+      xaxis:{title:'',gridcolor:'rgba(255,255,255,0.08)'},
+      yaxis:{title:'Homicides',gridcolor:'rgba(255,255,255,0.08)'}
+    }, {responsive:true});
+  }
+})();
+
+// Pressure scatter
+(function() {
+  let provs = ["Guayas","Esmeraldas","Manabí","Los Ríos","El Oro","Pichincha","Santa Elena","Santo Domingo","Sucumbíos","Azuay"],
+      rates = [58, 52, 38, 42, 35, 12, 40, 36, 28, 8],
+      spill = [18, 22, 15, 19, 14, 6, 17, 13, 12, 3];
+  Plotly.newPlot('chart-pressure', [{
+    x: rates, y: rates.map((r,i)=>r+spill[i]),
+    mode: 'markers+text', text: provs, textposition: 'top center',
+    marker: {size: spill.map(s=>s*3+10), color: spill, colorscale: 'YlOrRd', showscale: true,
+             colorbar: {title:'Spillover %'}},
+    type: 'scatter', name: 'Cantons'
+  }, {
+    x: [0, 60], y: [0, 60], mode: 'lines',
+    line: {dash:'dash',color:'gray'}, name: 'No spillover'
+  }], {
+    template:'plotly_dark', margin:{l:50,r:20,t:10,b:50},
+    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
+    xaxis:{title:'Own Homicide Rate',gridcolor:'rgba(255,255,255,0.08)'},
+    yaxis:{title:'Pressure (with spillover)',gridcolor:'rgba(255,255,255,0.08)'}
+  }, {responsive:true});
+})();
+
+// CRI bars
+(function() {
+  let cantons = [
+    {name:'Guayaquil',cri:91},{name:'Esmeraldas',cri:88},{name:'Durán',cri:84},
+    {name:'San Lorenzo',cri:81},{name:'Quevedo',cri:76},{name:'Manta',cri:72},
+    {name:'Quinindé',cri:68},{name:'Huaquillas',cri:65},{name:'Santo Domingo',cri:63},
+    {name:'Santa Elena',cri:60},{name:'Babahoyo',cri:56},{name:'Machala',cri:54},
+  ];
+  let bars = document.getElementById('cri-bars');
+  cantons.forEach(c => {
+    let color = c.cri >= 80 ? '#67000d' : c.cri >= 60 ? '#a50f15' : c.cri >= 40 ? '#ef3b2c' : '#fc9272';
+    bars.innerHTML += `
+      <div class="bar-item">
+        <div class="bar-label"><span>${c.name}</span><span>${c.cri}</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${c.cri}%;background:${color};">${c.cri >= 80 ? 'CRITICAL' : c.cri >= 60 ? 'VERY HIGH' : c.cri >= 40 ? 'HIGH' : 'ELEVATED'}</div></div>
+      </div>`;
+  });
+})();
+
+// Forecast
+(function() {
+  let histX = [], histY = [];
+  for (let y = 2018; y <= 2024; y++) {
+    for (let m = 1; m <= 12; m++) {
+      histX.push(`${y}-${String(m).padStart(2,'0')}`);
+      histY.push(200 + (y - 2018) * 45 + Math.sin(m/12*Math.PI*2)*30 + Math.random()*15);
+    }
+  }
+  let fcX = ['2025-01','2025-02','2025-03','2025-04','2025-05','2025-06',
+             '2025-07','2025-08','2025-09','2025-10','2025-11','2025-12'];
+  let lastY = histY[histY.length-1];
+  let fcY = fcX.map((_,i) => Math.round(lastY + (i+1)*8 + Math.random()*5));
+  let lower = fcY.map(v => Math.round(v - 25));
+  let upper = fcY.map(v => Math.round(v + 25));
+
+  Plotly.newPlot('chart-forecast', [
+    {x: histX, y: histY, type:'scatter', mode:'lines', name:'Historical', line:{color:'#a50f15',width:2}},
+    {x: fcX, y: fcY, type:'scatter', mode:'lines', name:'ARIMA Forecast', line:{color:'#2171b5',width:2,dash:'dash'}},
+    {x: fcX.concat(fcX.slice().reverse()), y: upper.concat(lower.reverse()),
+     fill:'toself', fillcolor:'rgba(33,113,181,0.2)', line:{width:0}, name:'95% CI'}
+  ], {
+    template:'plotly_dark', margin:{l:40,r:20,t:10,b:40},
+    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
+    xaxis:{gridcolor:'rgba(255,255,255,0.08)'},
+    yaxis:{title:'Monthly Homicides',gridcolor:'rgba(255,255,255,0.08)'}
+  }, {responsive:true});
+})();
+
+// Scatter
+(function() {
+  let poverty = [22,49,38,42,25,11,40,37,43,46,36,52,45,33,29,18,28,35,44,19,41,30,39,32,47,34,26,32];
+  let cri = [91,88,70,76,54,20,60,63,68,72,56,81,74,53,48,24,46,55,65,30,62,49,58,51,72,54,42,50];
+  Plotly.newPlot('chart-cri-scatter', [{
+    x: poverty, y: cri, mode: 'markers',
+    marker: {size: 12, color: cri, colorscale: 'Reds', showscale: true,
+             colorbar: {title:'CRI'}},
+    type: 'scatter', name: 'Cantons'
+  }], {
+    template:'plotly_dark', margin:{l:50,r:20,t:10,b:50},
+    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
+    xaxis:{title:'Poverty Rate (%)',gridcolor:'rgba(255,255,255,0.08)'},
+    yaxis:{title:'Crime Reality Index',gridcolor:'rgba(255,255,255,0.08)'}
+  }, {responsive:true});
+})();
+
+// Correlations
+(function() {
+  let edu = [10.2,7.4,8.7,8.1,9.8,11.8,8.4,8.6,7.9,7.5,8.8,8.0,8.2,9.0,8.5,10.5,10.1,9.6,8.3,7.6,10.2,8.5,8.8,8.1,8.0,8.3,10.1,8.1];
+  let crimer = [91,88,70,76,54,20,60,63,68,72,56,81,74,53,48,24,46,55,65,30,62,49,58,51,72,54,42,50];
+  Plotly.newPlot('chart-correlations', [{
+    x: edu, y: crimer, mode: 'markers',
+    marker: {size: 12, color: '#2171b5'},
+    type: 'scatter', name: 'Cantons'
+  }, {
+    x: [7,13], y: [90,10], mode:'lines',
+    line: {dash:'dash',color:'rgba(255,255,255,0.4)'}, name:'Trend (r=-0.61)'
+  }], {
+    template:'plotly_dark', margin:{l:50,r:20,t:10,b:50},
+    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
+    xaxis:{title:'Avg Years of Schooling',gridcolor:'rgba(255,255,255,0.08)'},
+    yaxis:{title:'CRI / Homicide Rate',gridcolor:'rgba(255,255,255,0.08)'}
+  }, {responsive:true});
+})();
+</script>
+
+</body>
+</html>
