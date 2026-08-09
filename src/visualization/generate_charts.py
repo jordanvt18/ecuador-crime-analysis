@@ -34,7 +34,6 @@ DARK_LAYOUT = dict(
     paper_bgcolor="rgba(0,0,0,0)",
     plot_bgcolor="rgba(0,0,0,0)",
     font=dict(color="#e0e0e0", size=12),
-    margin=dict(l=60, r=40, t=60, b=50),
 )
 COLOR_PALETTE = px.colors.qualitative.Set2 + px.colors.qualitative.Pastel
 
@@ -42,7 +41,7 @@ COLOR_PALETTE = px.colors.qualitative.Set2 + px.colors.qualitative.Pastel
 def write_html(fig, filename):
     path = os.path.join(OUT, filename)
     pio.write_html(fig, path, full_html=False, include_plotlyjs=False)
-    print(f"  ✓ {filename} → {path}")
+    print(f"  [OK] {filename} -> {path}")
 
 # ── Load data ─────────────────────────────────────────────────────────────────
 print("Cargando datos...")
@@ -71,7 +70,7 @@ map_df["bubble_size"] = map_df["total_homicidios"].clip(upper=300) / 3 + 5
 
 fig1 = go.Figure()
 
-# Color scale: yellow → orange → red
+# Color scale: yellow -> orange -> red
 color_scale = [
     [0.0, "#1a9850"],     # Green - low rate
     [0.15, "#fee08b"],    # Yellow
@@ -272,7 +271,6 @@ for quadrant, color in lisa_colors.items():
             color=color,
             opacity=0.75,
             sizemode="diameter",
-            line=dict(width=0.5, color="rgba(255,255,255,0.3)"),
         ),
         text=subset.apply(lambda r: f"<b>{r['canton']}</b><br>"
                                     f"Cuadrante: {lisa_labels_es.get(r['lisa_quadrant'], r['lisa_quadrant'])}<br>"
@@ -579,7 +577,7 @@ write_html(fig6, "provincial_heatmap.html")
 
 # ── Summary ────────────────────────────────────────────────────────────────────
 print("\n" + "=" * 60)
-print(f"✅ Visualizaciones generadas en: {OUT}")
+print(f"[DONE] Visualizaciones generadas en: {OUT}")
 for f in sorted(os.listdir(OUT)):
     if f.endswith(".html"):
         size = os.path.getsize(os.path.join(OUT, f))
