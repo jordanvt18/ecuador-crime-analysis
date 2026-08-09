@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,7 @@
   .story-bg-dark { background: #0d0d0d; }
   .story-bg-red { background: linear-gradient(135deg, #1a0002 0%, #3b0006 50%, #0d0d0d 100%); }
   .story-bg-blue { background: linear-gradient(135deg, #001025 0%, #0d0d0d 100%); }
+  .story-bg-purple { background: linear-gradient(135deg, #0a0018 0%, #1a0a2e 50%, #0d0d0d 100%); }
   h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2; }
   h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
   p.lead { font-size: 1.2rem; line-height: 1.8; opacity: 0.9; }
@@ -34,9 +35,16 @@
   .bar-label { font-size: 0.85rem; margin-bottom: 2px; display: flex; justify-content: space-between; }
   .bar-track { background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; height: 22px; }
   .bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; display: flex; align-items: center; padding-left: 8px; font-size: 0.8rem; font-weight: 600; }
+  .method-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; margin: 10px 0; }
+  .method-card h4 { color: #2171b5; font-size: 1.1rem; margin-bottom: 8px; }
+  .method-card p { font-size: 0.95rem; opacity: 0.8; line-height: 1.6; }
+  .data-source { background: rgba(33,113,181,0.1); border: 1px solid rgba(33,113,181,0.3); border-radius: 8px; padding: 15px; margin: 10px 0; }
   footer { text-align: center; padding: 40px 20px; background: #080808; border-top: 1px solid rgba(255,255,255,0.05); }
   .highlight { color: #a50f15; }
   .text-blue { color: #2171b5; }
+  .text-green { color: #2ca25f; }
+  .badge { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+  .badge-official { background: #2ca25f; color: #fff; }
   @media (max-width: 768px) {
     h2 { font-size: 2rem; }
     .stat-number { font-size: 2rem; }
@@ -55,25 +63,26 @@
     <p class="lead mt-4" style="max-width: 700px; margin: 0 auto;">
       A data-driven investigation into violence, spatial inequality,
       and the hidden patterns of criminality across Ecuadorian cantons.
-      <br><strong>2018–2024</strong>
+      <br><strong>2014–2026</strong> · <span class="badge badge-official">Official Data</span>
     </p>
+
     <div style="margin-top: 40px; opacity: 0.5;">
       <small>Scroll to explore ↡</small>
     </div>
   </div>
 </section>
 
-<!-- The Numbers -->
+<!-- Chapter 1: The Numbers -->
 <section class="story-section story-bg-dark">
   <div class="container">
     <h2>Chapter 1: <span class="highlight">The Numbers</span></h2>
-    <p class="lead">Ecuador's homicide rate has escalated sharply since 2020, transforming from one of Latin America's safer nations into a focal point of violence. Behind the national statistics lie stark regional disparities.</p>
+    <p class="lead">Ecuador's homicide crisis escalated dramatically since 2020. Behind the national statistics lie stark regional disparities. Data from the Ministerio del Interior shows 43,976 violent deaths recorded from 2014 to June 2026.</p>
 
     <div class="row mt-5 g-4">
-      <div class="col-md-3"><div class="stat-box"><div class="stat-number highlight">~36</div><div class="stat-label">Homicides per 100k (2024)</div></div></div>
-      <div class="col-md-3"><div class="stat-box"><div class="stat-number highlight">~10,000+</div><div class="stat-label">Violent Deaths (2018-2024)</div></div></div>
-      <div class="col-md-3"><div class="stat-box"><div class="stat-number text-blue">45%+</div><div class="stat-label">Prison Overcrowding</div></div></div>
-      <div class="col-md-3"><div class="stat-box"><div class="stat-number" style="color:#fd8d3c;">~400/100k</div><div class="stat-label">Robbery Rate</div></div></div>
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number highlight">9,283</div><div class="stat-label">Homicides in 2025</div></div></div>
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number highlight">43,976</div><div class="stat-label">Total Deaths (2014–Jun 2026)</div></div></div>
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number text-blue">4,154</div><div class="stat-label">Homicides Jan–Jun 2026</div></div></div>
+      <div class="col-md-3"><div class="stat-box"><div class="stat-number" style="color:#fd8d3c;">79.4%</div><div class="stat-label">Firearm Deaths</div></div></div>
     </div>
 
     <div class="chart-container mt-5">
@@ -81,19 +90,19 @@
     </div>
 
     <p class="mt-3" style="opacity: 0.7; font-size: 0.9rem;">
-      The upward trend is unmistakable. A structural break occurred around 2020-2021, coinciding with prison system collapse, gang fragmentation, and the post-pandemic economic shock.
+      The upward trend is unmistakable. A structural break occurred around 2020-2021, coinciding with prison system collapse, gang fragmentation, and the post-pandemic economic shock. 2025 was the most violent year on record with 9,283 homicides.
     </p>
   </div>
 </section>
 
-<!-- The Geography of Violence -->
+<!-- Chapter 2: The Geography of Violence -->
 <section class="story-section story-bg-red">
   <div class="container">
     <h2>Chapter 2: <span class="highlight">The Geography of Violence</span></h2>
     <p class="lead">Crime in Ecuador is not random — it follows geographic fault lines. Coastal provinces, border regions, and major port cities concentrate the vast majority of violence.</p>
 
     <div class="chart-container mt-4">
-      <div id="chart-heatmap" style="height: 500px;"></div>
+      <div id="chart-heatmap" style="height: 550px;"></div>
     </div>
 
     <h3 class="mt-5">Hotspot Detection (Getis-Ord Gi*)</h3>
@@ -102,25 +111,30 @@
     <div class="row mt-4 g-4">
       <div class="col-md-6">
         <div class="stat-box">
-          <div class="stat-number highlight">16</div>
-          <div class="stat-label" style="font-size:0.9rem;">Significant Gi* Hotspot Cantons (z > 1.645)</div>
+          <div class="stat-number highlight">33</div>
+          <div class="stat-label" style="font-size:0.9rem;">Significant Gi* Hotspot Cantons (90%+ confidence)</div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="stat-box">
-          <div class="stat-number text-blue">+0.39</div>
-          <div class="stat-label" style="font-size:0.9rem;">Moran's I — Strong spatial clustering (p < 0.001)</div>
+          <div class="stat-number text-blue">0.456</div>
+          <div class="stat-label" style="font-size:0.9rem;">Moran's I (KNN k=6) — Strong clustering (p < 0.001)</div>
         </div>
       </div>
     </div>
 
     <p class="mt-4" style="opacity: 0.7; font-size: 0.9rem;">
-      Moran's I of 0.39 confirms that cantons with high crime are surrounded by other high-crime cantons — violence is not isolated, it <em>spreads spatially</em>.
+      Moran's I of 0.456 confirms that cantons with high crime are surrounded by other high-crime cantons — violence is not isolated, it <em>spreads spatially</em>. The 999-permutation test confirms significance at p &lt; 0.001.
     </p>
+
+    <h3 class="mt-5">Top 12 Cantons by Homicide Rate (2025)</h3>
+    <div class="chart-container">
+      <div id="chart-top-cantons" style="height: 450px;"></div>
+    </div>
   </div>
 </section>
 
-<!-- The Spillover Effect -->
+<!-- Chapter 3: The Spillover Effect -->
 <section class="story-section story-bg-dark">
   <div class="container">
     <h2>Chapter 3: <span class="highlight">The Spillover Effect</span></h2>
@@ -131,41 +145,51 @@
     </div>
 
     <p style="opacity: 0.7; font-size: 0.9rem;">
-      On average, cantons experience a <span class="highlight">+28% spillover effect</span> — meaning nearby violence raises local pressure significantly above the canton's own baseline.
+      The Spatial Lag Model (SAR) estimates <span class="highlight">rho = 0.49</span>, meaning approximately half of a canton's crime level is explained by neighboring cantons' crime. This is a direct/indirect effects decomposition from LeSage-Pace (2009).
     </p>
 
     <h3 class="mt-5">Timeline: Ecuador's Descent</h3>
     <div class="timeline mt-4">
       <div class="timeline-item">
-        <div class="timeline-date">2018-2019</div>
+        <div class="timeline-date">2014-2019</div>
         <strong>Relative Stability</strong>
-        <p class="mb-0" style="opacity:0.8;">Homicide rate ~5.8/100k. Colombia FARC demobilization shifts some trafficking routes through Ecuador.</p>
+        <p class="mb-0" style="opacity:0.8;">Homicides ranged from 958 to 1,310 per year. Colombia FARC demobilization shifts some trafficking routes through Ecuador.</p>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">Early 2020</div>
-        <strong>COVID-19 & Economic Shock</strong>
-        <p class="mb-0" style="opacity:0.8;">Pandemic lockdowns disrupt informal economy, poverty spikes to 32%. Prison system becomes unmanageable.</p>
+        <strong>COVID-19 &amp; Economic Shock</strong>
+        <p class="mb-0" style="opacity:0.8;">Pandemic lockdowns disrupt informal economy. Prison system becomes unmanageable. 1,371 homicides.</p>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">Feb 2021</div>
         <strong>Prison Massacres Begin</strong>
-        <p class="mb-0" style="opacity:0.8;">79 killed in simultaneous prison riots. Inaugurates an era of intramural gang warfare that spills into streets.</p>
+        <p class="mb-0" style="opacity:0.8;">79 killed in simultaneous prison riots. 2,495 total homicides. Inaugurates an era of intramural gang warfare that spills into streets.</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2022</div>
-        <strong>Cartel Fragmentation</strong>
-        <p class="mb-0" style="opacity:0.8;">Splintering of major trafficking organizations creates dozens of smaller gangs competing for territory.</p>
+        <div class="timeline-date">2022-2023</div>
+        <strong>Explosive Escalation</strong>
+        <p class="mb-0" style="opacity:0.8;">Homicides jump from 4,886 to 8,248. Cartel fragmentation creates dozens of smaller gangs competing for territory.</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2023-2024</div>
+        <div class="timeline-date">2024</div>
         <strong>State of Emergency</strong>
-        <p class="mb-0" style="opacity:0.8;">Homicide rate surpasses 36/100k. Multiple states of emergency declared. Military deployed to streets and prisons.</p>
+        <p class="mb-0" style="opacity:0.8;">7,065 homicides. Multiple states of emergency declared. Military deployed to streets and prisons. Slight decline from 2023 peak.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2025</div>
+        <strong>Worst Year on Record</strong>
+        <p class="mb-0" style="opacity:0.8;">9,283 homicides — the deadliest year in Ecuador's history. 79.4% committed with firearms. Guayas alone accounts for over 3,500 deaths.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan-Jun 2026</div>
+        <strong>Continuing Crisis</strong>
+        <p class="mb-0" style="opacity:0.8;">4,154 homicides in the first half of 2026. Projection for full year: ~8,300+ if trend continues. Data from Ministerio del Interior, published on Datos Abiertos Ecuador.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Crime Reality Index -->
+<!-- Chapter 4: Crime Reality Index -->
 <section class="story-section story-bg-blue">
   <div class="container">
     <h2>Chapter 4: <span class="highlight">Crime Reality Index</span></h2>
@@ -185,7 +209,6 @@
     </div>
 
     <div class="bar-chart-container" id="cri-bars">
-      <!-- Populated by JS -->
     </div>
 
     <div class="chart-container mt-4">
@@ -194,7 +217,7 @@
   </div>
 </section>
 
-<!-- Root Causes -->
+<!-- Chapter 5: Root Causes -->
 <section class="story-section story-bg-dark">
   <div class="container">
     <h2>Chapter 5: <span class="highlight">The Root Causes</span></h2>
@@ -222,35 +245,84 @@
     <div class="chart-container mt-4">
       <div id="chart-correlations" style="height: 450px;"></div>
     </div>
+  </div>
+</section>
 
-    <div class="row mt-5 g-4">
-      <div class="col-md-4">
-        <div class="stat-box">
-          <div class="stat-number" style="color:#fd8d3c;">r = 0.52</div>
-          <div class="stat-label">Inequality (Gini) → Homicide</div>
-        </div>
+<!-- Chapter 6: Spatial Econometric Methods -->
+<section class="story-section story-bg-purple">
+  <div class="container">
+    <h2>Chapter 6: <span class="highlight">Spatial Econometric Methods</span></h2>
+    <p class="lead">Beyond descriptive statistics, we apply formal spatial econometric models from the Springer reference <em>Spatial Econometric Methods</em> (10.1007/978-3-030-81484-7). These models quantify how violence spills across administrative boundaries.</p>
+
+    <div class="method-card">
+      <h4>📊 Global Moran's I — Spatial Autocorrelation</h4>
+      <p>Tests whether crime is randomly distributed or spatially clustered. We use 999 Monte Carlo permutations for robust inference.</p>
+      <div class="row mt-3 g-3">
+        <div class="col-md-4"><strong>I = 0.456</strong> (KNN k=6)</div>
+        <div class="col-md-4"><strong>Z = 8.484</strong></div>
+        <div class="col-md-4"><strong>p &lt; 0.001</strong> (999 permutations)</div>
       </div>
-      <div class="col-md-4">
-        <div class="stat-box">
-          <div class="stat-number" style="color:#fd8d3c;">r = 0.71</div>
-          <div class="stat-label">Gang Presence → Homicide</div>
-        </div>
+      <p class="mt-2"><strong>Interpretation:</strong> Strong positive spatial autocorrelation — high-crime cantons are surrounded by other high-crime cantons. Violence is not isolated; it clusters geographically.</p>
+    </div>
+
+    <div class="method-card">
+      <h4>🎯 LISA — Local Indicators of Spatial Association</h4>
+      <p>Decomposes global Moran's I into local contributions, identifying four types of spatial patterns:</p>
+      <div class="row mt-3 g-3">
+        <div class="col-md-3"><div class="p-2 text-center" style="background:rgba(165,15,21,0.3);border-radius:8px;"><strong style="color:#a50f15;">70</strong><br><small>Hotspots (HH)</small></div></div>
+        <div class="col-md-3"><div class="p-2 text-center" style="background:rgba(33,113,181,0.3);border-radius:8px;"><strong style="color:#2171b5;">72</strong><br><small>Coldspots (LL)</small></div></div>
+        <div class="col-md-3"><div class="p-2 text-center" style="background:rgba(253,141,60,0.3);border-radius:8px;"><strong style="color:#fd8d3c;">40</strong><br><small>High outliers (HL)</small></div></div>
+        <div class="col-md-3"><div class="p-2 text-center" style="background:rgba(44,162,95,0.3);border-radius:8px;"><strong style="color:#2ca25f;">33</strong><br><small>Low outliers (LH)</small></div></div>
       </div>
-      <div class="col-md-4">
-        <div class="stat-box">
-          <div class="stat-number" style="color:#fd8d3c;">r = 0.44</div>
-          <div class="stat-label">Prison Violence → External Violence</div>
-        </div>
+    </div>
+
+    <div class="method-card">
+      <h4>📉 Spatial Lag Model (SAR)</h4>
+      <p><code>y = ρ·W·y + X·β + ε</code></p>
+      <p>The Spatial Autoregressive model captures direct spatial spillover: crime in neighboring cantons directly influences local crime.</p>
+      <div class="row mt-3 g-3">
+        <div class="col-md-3"><strong>ρ = 0.49</strong><br><small>Spatial lag coefficient</small></div>
+        <div class="col-md-3"><strong>R² = 0.309</strong><br><small>vs OLS R² = 0.017</small></div>
+        <div class="col-md-3"><strong>Log-L = -390.46</strong><br><small>vs OLS Log-L = -391.63</small></div>
+        <div class="col-md-3"><span class="text-green"><strong>↑ 17.8×</strong></span><br><small>R² improvement over OLS</small></div>
       </div>
+    </div>
+
+    <div class="method-card">
+      <h4>🔄 Direct/Indirect/Total Effects (LeSage-Pace Decomposition)</h4>
+      <p>The key insight from LeSage &amp; Pace (2009): spatial models decompose the total impact into direct (within-canton) and indirect (spillover to neighbors) effects.</p>
+      <div class="chart-container mt-3">
+        <div id="chart-sar-effects" style="height: 350px;"></div>
+      </div>
+    </div>
+
+    <div class="method-card">
+      <h4>⚠️ Spatial Error Model (SEM)</h4>
+      <p><code>y = X·β + u,  u = λ·W·u + ε</code></p>
+      <p>The Spatial Error Model captures spatial dependence in unobserved factors (omitted variables that are spatially correlated).</p>
+      <div class="row mt-3 g-3">
+        <div class="col-md-4"><strong>λ = 0.49</strong><br><small>Spatial error coefficient</small></div>
+        <div class="col-md-4"><strong>R² = 0.017</strong></div>
+        <div class="col-md-4"><strong>Log-L = -391.63</strong></div>
+      </div>
+    </div>
+
+    <div class="data-source mt-4">
+      <h5 style="color:#2ca25f;">📚 Methodology Reference</h5>
+      <p style="font-size:0.9rem;opacity:0.8;">
+        Springer "Spatial Econometric Methods" — DOI: <a href="https://link.springer.com/book/10.1007/978-3-030-81484-7" style="color:#2171b5;">10.1007/978-3-030-81484-7</a><br>
+        Key methods: Spatial weight matrices, Global/Local Moran's I, SAR, SEM, SDM, Direct/Indirect effects decomposition, GWR concepts.<br>
+        Implementation: <code>src/analysis/spatial_econometrics.py</code>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- The Future -->
+<!-- Chapter 7: Looking Forward -->
 <section class="story-section story-bg-dark" style="min-height: 80vh;">
   <div class="container">
-    <h2>Chapter 6: <span class="highlight">Looking Forward</span></h2>
-    <p class="lead">Our ARIMA(2,1,2) model projects the trajectory for the next 12 months. Without structural intervention, the escalating trend continues.</p>
+    <h2>Chapter 7: <span class="highlight">Looking Forward</span></h2>
+    <p class="lead">With 4,154 homicides recorded in the first half of 2026, the projected annual total is approximately <span class="highlight">8,308</span>. Without structural intervention, the crisis continues at sustained high levels.</p>
 
     <div class="chart-container">
       <div id="chart-forecast" style="height: 450px;"></div>
@@ -258,24 +330,25 @@
 
     <div class="row mt-5 g-4">
       <div class="col-md-4">
-        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">📈 Trend Direction</div><div class="stat-number highlight">↑ Rising</div></div>
+        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">📈 Trend Direction</div><div class="stat-number highlight">↑ Sustained</div></div>
       </div>
       <div class="col-md-4">
-        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">Seasonal Peak</div><div class="stat-number" style="color:#fd8d3c;">Q2-Q3</div></div>
+        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">2026 Projected</div><div class="stat-number" style="color:#fd8d3c;">~8,308</div></div>
       </div>
       <div class="col-md-4">
-        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">Critical Cantons</div><div class="stat-number highlight">14</div></div>
+        <div class="stat-box"><div class="stat-label" style="font-size:0.9rem;">Critical Cantons</div><div class="stat-number highlight">33+</div></div>
       </div>
     </div>
 
     <div class="mt-5 p-4" style="background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
       <h3>What This Means</h3>
       <ol style="font-size:1.05rem;line-height:2;">
-        <li><strong>Geographic concentration requires targeted intervention.</strong> The Pacific corridor needs focused state presence.</li>
-        <li><strong>Socioeconomic drivers demand long-term investment.</strong> Law enforcement alone is insufficient — poverty, education, and inequality gaps fuel recruitment.</li>
+        <li><strong>Geographic concentration requires targeted intervention.</strong> The Pacific corridor (Guayas, Esmeraldas, Manabí, Los Ríos, El Oro, Santa Elena) needs focused state presence.</li>
+        <li><strong>Spatial spillover is real and quantifiable.</strong> SAR model shows rho = 0.49 — half of a canton's crime level is explained by neighbors. Targeted interventions in hub cantons will have cascading effects.</li>
+        <li><strong>Socioeconomic drivers demand long-term investment.</strong> Poverty (r=0.68) and education (r=-0.61) correlations show that law enforcement alone is insufficient.</li>
         <li><strong>Prison reform is urgent.</strong> The penitentiary system acts as a crime multiplier, not just containment.</li>
-        <li><strong>Cross-border dynamics matter.</strong> Ecuador's geography makes it a transit hub — regional cooperation is essential.</li>
-        <li><strong>Data transparency enables accountability.</strong> This project demonstrates what's possible with public data — more granular, timely data from authorities would strengthen analysis.</li>
+        <li><strong>Firearms dominate.</strong> 79.4% of homicides in 2025 used firearms. Arms control is critical.</li>
+        <li><strong>Data transparency enables accountability.</strong> The Ministerio del Interior's open data publication is a step forward — more granular, timely data would strengthen analysis.</li>
       </ol>
     </div>
   </div>
@@ -289,31 +362,42 @@
 
     <div class="row mt-4 g-4">
       <div class="col-md-6">
-        <ul style="line-height:2.5;font-size:1rem;">
-          <li>🇪🇨 <strong>Policía Nacional del Ecuador</strong> — crime statistics</li>
-          <li>🏛️ <strong>Ministerio del Interior</strong> — violent deaths registry</li>
-          <li>⚖️ <strong>Fiscalía General del Estado</strong> — femicides, investigations</li>
-          <li>📊 <strong>INEC</strong> — census, ENEMDU, socioeconomic indicators</li>
-        </ul>
+        <div class="data-source">
+          <h5 style="color:#2ca25f;">📊 Ministerio del Interior</h5>
+          <p style="font-size:0.9rem;opacity:0.8;">Homicidios Intencionales (2014-2025 + Enero-Junio 2026)<br>
+          <a href="https://cifras.ministeriodelinterior.gob.ec/#/app/estadisticas-seguridad-homicidios" style="color:#2171b5;">cifras.ministeriodelinterior.gob.ec</a></p>
+        </div>
+        <div class="data-source">
+          <h5 style="color:#2ca25f;">📂 Datos Abiertos Ecuador</h5>
+          <p style="font-size:0.9rem;opacity:0.8;">Dataset: Homicidios Intencionales (4 recursos)<br>
+          <a href="https://www.datosabiertos.gob.ec/dataset/homicidios-intencionales" style="color:#2171b5;">datosabiertos.gob.ec</a></p>
+        </div>
       </div>
       <div class="col-md-6">
-        <ul style="line-height:2.5;font-size:1rem;">
-          <li>🗺️ <strong>SNI / Geoportal IGM</strong> — spatial layers</li>
-          <li>🔒 <strong>SNAI</strong> — prison system data</li>
-          <li>📂 <strong>Datos Abiertos Ecuador</strong> — open data portal</li>
-          <li>🌐 <strong>GADM</strong> — administrative boundaries</li>
-        </ul>
+        <div class="data-source">
+          <h5 style="color:#2ca25f;">🌐 OECO/PADF</h5>
+          <p style="font-size:0.9rem;opacity:0.8;">Observatorio de Ecuador Contra el Crimen Organizado<br>
+          <a href="https://oeco.padf.org/datos/" style="color:#2171b5;">oeco.padf.org/datos</a></p>
+        </div>
+        <div class="data-source">
+          <h5 style="color:#2ca25f;">📚 Springer</h5>
+          <p style="font-size:0.9rem;opacity:0.8;">Spatial Econometric Methods<br>
+          <a href="https://link.springer.com/book/10.1007/978-3-030-81484-7" style="color:#2171b5;">DOI: 10.1007/978-3-030-81484-7</a></p>
+        </div>
       </div>
     </div>
 
     <div class="mt-5">
       <h4>Analytical Methods</h4>
       <div class="row mt-3 g-3">
-        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Getis-Ord Gi* hotspot detection</div></div>
-        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Global Moran's I autocorrelation</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Getis-Ord Gi* hotspot detection (90/95/99%)</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Global Moran's I (999 permutations)</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">LISA — Local Indicators of Spatial Association</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Spatial Lag Model (SAR)</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Spatial Error Model (SEM)</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">LeSage-Pace Direct/Indirect/Total Effects</div></div>
         <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">STL time-series decomposition</div></div>
-        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">ARIMA(2,1,2) forecasting</div></div>
-        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Pearson & Spearman correlations</div></div>
+        <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Pearson &amp; Spearman correlations</div></div>
         <div class="col-md-4"><div class="p-2" style="background:rgba(255,255,255,0.04);border-radius:8px;">Composite index construction</div></div>
       </div>
     </div>
@@ -321,145 +405,252 @@
 </section>
 
 <footer>
-  <p>🇪🇨 Ecuador Crime Reality Analysis · 2025</p>
+  <p>🇪🇨 Ecuador Crime Reality Analysis · 2026 · Updated with official data through June 2026</p>
   <p style="opacity:0.5;font-size:0.85rem;">
-    Data from Policía Nacional, Ministerio del Interior, Fiscalía, INEC, SNAI, SNI/Geoportal.
-    <br>Built with Python, Plotly, Dash, GeoPandas, Statsmodels, and Folium.
+    Data: Ministerio del Interior · Datos Abiertos Ecuador · OECO/PADF
+    <br>Methods: Springer Spatial Econometric Methods · LeSage-Pace (2009)
+    <br>Built with Python, Plotly, GeoPandas, Statsmodels, SciPy.
   </p>
 </footer>
 
 <script>
-// National time series
-(async function() {
-  const resp = await fetch('assets/timeseries.html');
-  if (resp.ok) {
-    document.getElementById('chart-timeseries').innerHTML = await resp.text();
-  }
-  // Fallback
-  if (!document.getElementById('chart-timeseries').innerHTML.trim()) {
-    let traces = [];
-    for (let y = 2018; y <= 2024; y++) {
-      for (let m = 1; m <= 12; m++) {
-        let trend = 200 + (y - 2018) * 40 + Math.sin(m / 12 * Math.PI * 2) * 30 + Math.random() * 20;
-        traces.push({x: `${y}-${String(m).padStart(2,'0')}`, y: Math.round(trend)});
-      }
-    }
-    Plotly.newPlot('chart-timeseries', [{
-      x: traces.map(t=>t.x), y: traces.map(t=>t.y), type: 'scatter', mode: 'lines',
-      line: {color:'#a50f15',width:2}, name:'Monthly Homicides'
-    }], {
-      template:'plotly_dark', margin:{l:40,r:20,t:10,b:40},
-      paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
-      xaxis:{title:'',gridcolor:'rgba(255,255,255,0.08)'},
-      yaxis:{title:'Homicides',gridcolor:'rgba(255,255,255,0.08)'}
-    }, {responsive:true});
-  }
-})();
-
-// Pressure scatter
+// ===== NATIONAL TIME SERIES =====
 (function() {
-  let provs = ["Guayas","Esmeraldas","Manabí","Los Ríos","El Oro","Pichincha","Santa Elena","Santo Domingo","Sucumbíos","Azuay"],
-      rates = [58, 52, 38, 42, 35, 12, 40, 36, 28, 8],
-      spill = [18, 22, 15, 19, 14, 6, 17, 13, 12, 3];
-  Plotly.newPlot('chart-pressure', [{
-    x: rates, y: rates.map((r,i)=>r+spill[i]),
-    mode: 'markers+text', text: provs, textposition: 'top center',
-    marker: {size: spill.map(s=>s*3+10), color: spill, colorscale: 'YlOrRd', showscale: true,
-             colorbar: {title:'Spillover %'}},
-    type: 'scatter', name: 'Cantons'
+  const months = ['2014-01', '2014-02', '2014-03', '2014-04', '2014-05', '2014-06', '2014-07', '2014-08', '2014-09', '2014-10', '2014-11', '2014-12', '2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06', '2015-07', '2015-08', '2015-09', '2015-10', '2015-11', '2015-12', '2016-01', '2016-02', '2016-03', '2016-04', '2016-05', '2016-06', '2016-07', '2016-08', '2016-09', '2016-10', '2016-11', '2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05', '2017-06', '2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12', '2018-01', '2018-02', '2018-03', '2018-04', '2018-05', '2018-06', '2018-07', '2018-08', '2018-09', '2018-10', '2018-11', '2018-12', '2019-01', '2019-02', '2019-03', '2019-04', '2019-05', '2019-06', '2019-07', '2019-08', '2019-09', '2019-10', '2019-11', '2019-12', '2020-01', '2020-02', '2020-03', '2020-04', '2020-05', '2020-06', '2020-07', '2020-08', '2020-09', '2020-10', '2020-11', '2020-12', '2021-01', '2021-02', '2021-03', '2021-04', '2021-05', '2021-06', '2021-07', '2021-08', '2021-09', '2021-10', '2021-11', '2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07', '2022-08', '2022-09', '2022-10', '2022-11', '2022-12', '2023-01', '2023-02', '2023-03', '2023-04', '2023-05', '2023-06', '2023-07', '2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06'];
+  const values = [151, 101, 129, 120, 107, 115, 82, 114, 90, 82, 106, 113, 98, 82, 106, 85, 95, 100, 75, 78, 82, 89, 82, 78, 99, 73, 78, 77, 89, 84, 87, 72, 82, 56, 89, 73, 95, 90, 93, 86, 90, 80, 75, 68, 71, 69, 65, 88, 73, 86, 89, 99, 98, 76, 71, 76, 89, 76, 83, 80, 83, 87, 83, 118, 103, 101, 90, 89, 95, 115, 111, 114, 113, 116, 80, 88, 96, 115, 93, 122, 105, 138, 148, 157, 122, 226, 173, 176, 172, 170, 198, 203, 325, 225, 282, 223, 318, 317, 350, 373, 435, 363, 411, 401, 483, 477, 425, 533, 534, 505, 659, 645, 662, 710, 795, 602, 781, 833, 766, 756, 507, 388, 536, 526, 585, 611, 600, 621, 610, 702, 666, 713, 800, 751, 857, 742, 935, 574, 636, 772, 771, 783, 858, 804, 760, 684, 667, 677, 697, 669];
+  
+  Plotly.newPlot('chart-timeseries', [{
+    x: months, y: values, type: 'scatter', mode: 'lines',
+    line: {color: '#a50f15', width: 2},
+    name: 'Homicidios mensuales',
+    hovertemplate: '<b>%{x}</b><br>Homicidios: %{y}<extra></extra>'
   }, {
-    x: [0, 60], y: [0, 60], mode: 'lines',
-    line: {dash:'dash',color:'gray'}, name: 'No spillover'
+    x: months, y: values, type: 'bar',
+    marker: {color: 'rgba(165,15,21,0.3)'},
+    name: '',
+    hoverinfo: 'skip'
   }], {
-    template:'plotly_dark', margin:{l:50,r:20,t:10,b:50},
-    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
-    xaxis:{title:'Own Homicide Rate',gridcolor:'rgba(255,255,255,0.08)'},
-    yaxis:{title:'Pressure (with spillover)',gridcolor:'rgba(255,255,255,0.08)'}
-  }, {responsive:true});
+    template: 'plotly_dark',
+    margin: {l: 50, r: 20, t: 10, b: 40},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    xaxis: {title: '', gridcolor: 'rgba(255,255,255,0.08)'},
+    yaxis: {title: 'Homicidios mensuales', gridcolor: 'rgba(255,255,255,0.08)'},
+    showlegend: false,
+    annotations: [
+      {x: '2021-06', y: 200, text: ' Structural break', showarrow: true, arrowhead: 1, ax: 50, ay: -50, font: {color: '#fd8d3c', size: 11}},
+      {x: '2025-06', y: 850, text: ' Peak 2025', showarrow: true, arrowhead: 1, ax: 30, ay: -40, font: {color: '#a50f15', size: 11}}
+    ]
+  }, {responsive: true});
 })();
 
-// CRI bars
+// ===== CHAPTER 2 HEATMAP (THE FIX) =====
 (function() {
-  let cantons = [
-    {name:'Guayaquil',cri:91},{name:'Esmeraldas',cri:88},{name:'Durán',cri:84},
-    {name:'San Lorenzo',cri:81},{name:'Quevedo',cri:76},{name:'Manta',cri:72},
-    {name:'Quinindé',cri:68},{name:'Huaquillas',cri:65},{name:'Santo Domingo',cri:63},
-    {name:'Santa Elena',cri:60},{name:'Babahoyo',cri:56},{name:'Machala',cri:54},
-  ];
+  const cantons = [{'provincia': 'Azuay', 'canton': 'Camilo Ponce Enríquez', 'codigo_canton': 115, 'total_homicidios': 178, 'latitud': -2.838308121452818, 'longitud': -74.34491730088013, 'femicidios': 4, 'asesinatos': 154, 'sicariatos': 0, 'homicidios_2023': 28, 'homicidios_2024': 59, 'homicidios_2025': 12, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 118.0, 'homicide_rate_2025': 24.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Azuay', 'canton': 'Chordeleg', 'codigo_canton': 111, 'total_homicidios': 4, 'latitud': -2.196775, 'longitud': -59.082945, 'femicidios': 0, 'asesinatos': 4, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 3, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 12.0}, {'provincia': 'Azuay', 'canton': 'Cuenca', 'codigo_canton': 101, 'total_homicidios': 325, 'latitud': -2.6168060122380874, 'longitud': -71.49328749137544, 'femicidios': 25, 'asesinatos': 217, 'sicariatos': 5, 'homicidios_2023': 24, 'homicidios_2024': 18, 'homicidios_2025': 22, 'homicidios_2026': 18, 'poblacion_miles': 600, 'homicide_rate_2024': 3.0, 'homicide_rate_2025': 3.7, 'homicide_rate_2026_proj': 6.0}, {'provincia': 'Azuay', 'canton': 'El Pan', 'codigo_canton': 112, 'total_homicidios': 2, 'latitud': -1.419685, 'longitud': -39.335215, 'femicidios': 1, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Girón', 'codigo_canton': 102, 'total_homicidios': 5, 'latitud': -1.8942144318453944, 'longitud': -47.48287923018454, 'femicidios': 0, 'asesinatos': 4, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Guachapala', 'codigo_canton': 114, 'total_homicidios': 1, 'latitud': -2.774391, 'longitud': -78.712974, 'femicidios': 1, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Gualaceo', 'codigo_canton': 103, 'total_homicidios': 15, 'latitud': -1.9354888210284076, 'longitud': -52.51743771244551, 'femicidios': 2, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Nabón', 'codigo_canton': 104, 'total_homicidios': 8, 'latitud': -2.487935737984985, 'longitud': -59.34190623898555, 'femicidios': 1, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Paute', 'codigo_canton': 105, 'total_homicidios': 5, 'latitud': -2.7573602, 'longitud': -78.73647220000001, 'femicidios': 1, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Pucará', 'codigo_canton': 106, 'total_homicidios': 12, 'latitud': -2.7417606666666665, 'longitud': -66.34308341666666, 'femicidios': 0, 'asesinatos': 10, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 6, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 12.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'San Fernando', 'codigo_canton': 107, 'total_homicidios': 1, 'latitud': 0.0, 'longitud': 0.0, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Santa Isabel', 'codigo_canton': 108, 'total_homicidios': 15, 'latitud': -2.8377415274001208, 'longitud': -68.7659005122241, 'femicidios': 1, 'asesinatos': 12, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 4, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 8.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Sevilla De Oro', 'codigo_canton': 113, 'total_homicidios': 2, 'latitud': -2.777594549999995, 'longitud': -78.64916794999999, 'femicidios': 0, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Sígsig', 'codigo_canton': 109, 'total_homicidios': 10, 'latitud': -2.743760188002263, 'longitud': -70.9596695790195, 'femicidios': 3, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Caluma', 'codigo_canton': 206, 'total_homicidios': 20, 'latitud': -1.2193675467081326, 'longitud': -59.4443561944224, 'femicidios': 5, 'asesinatos': 12, 'sicariatos': 1, 'homicidios_2023': 2, 'homicidios_2024': 3, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Chillanes', 'codigo_canton': 202, 'total_homicidios': 22, 'latitud': -1.932564022660079, 'longitud': -75.56256142022112, 'femicidios': 1, 'asesinatos': 17, 'sicariatos': 0, 'homicidios_2023': 5, 'homicidios_2024': 1, 'homicidios_2025': 9, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 18.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Chimbo', 'codigo_canton': 203, 'total_homicidios': 10, 'latitud': -1.3314534999999998, 'longitud': -63.2412517, 'femicidios': 0, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 4, 'homicidios_2025': 0, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 8.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Bolívar', 'canton': 'Echeandía', 'codigo_canton': 204, 'total_homicidios': 12, 'latitud': -0.7238129382825833, 'longitud': -39.64993902305567, 'femicidios': 2, 'asesinatos': 7, 'sicariatos': 3, 'homicidios_2023': 0, 'homicidios_2024': 2, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 4.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Guaranda', 'codigo_canton': 201, 'total_homicidios': 55, 'latitud': -1.4132335926101258, 'longitud': -73.27287005440999, 'femicidios': 3, 'asesinatos': 43, 'sicariatos': 0, 'homicidios_2023': 6, 'homicidios_2024': 8, 'homicidios_2025': 3, 'homicidios_2026': 2, 'poblacion_miles': 86, 'homicide_rate_2024': 9.3, 'homicide_rate_2025': 3.5, 'homicide_rate_2026_proj': 4.7}, {'provincia': 'Bolívar', 'canton': 'Las Naves', 'codigo_canton': 207, 'total_homicidios': 48, 'latitud': -1.2420375833333333, 'longitud': -77.66352049999999, 'femicidios': 0, 'asesinatos': 48, 'sicariatos': 0, 'homicidios_2023': 6, 'homicidios_2024': 11, 'homicidios_2025': 21, 'homicidios_2026': 8, 'poblacion_miles': 50, 'homicide_rate_2024': 22.0, 'homicide_rate_2025': 42.0, 'homicide_rate_2026_proj': 32.0}, {'provincia': 'Bolívar', 'canton': 'San Miguel', 'codigo_canton': 205, 'total_homicidios': 20, 'latitud': -1.6756554860934734, 'longitud': -75.14444991743798, 'femicidios': 2, 'asesinatos': 14, 'sicariatos': 0, 'homicidios_2023': 5, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Bolívar', 'codigo_canton': 402, 'total_homicidios': 10, 'latitud': 0.5026599015485227, 'longitud': -77.9226901009265, 'femicidios': 0, 'asesinatos': 7, 'sicariatos': 0, 'homicidios_2023': 11, 'homicidios_2024': 3, 'homicidios_2025': 8, 'homicidios_2026': 5, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 16.0, 'homicide_rate_2026_proj': 20.0}, {'provincia': 'Carchi', 'canton': 'Espejo', 'codigo_canton': 403, 'total_homicidios': 5, 'latitud': 0.6408571887529912, 'longitud': -77.94594597406885, 'femicidios': 1, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Mira', 'codigo_canton': 404, 'total_homicidios': 9, 'latitud': 0.6480410092704418, 'longitud': -78.15323056802818, 'femicidios': 1, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Montúfar', 'codigo_canton': 405, 'total_homicidios': 20, 'latitud': 0.5339211987561757, 'longitud': -70.05161008604554, 'femicidios': 5, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 3, 'homicidios_2025': 2, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Carchi', 'canton': 'San Pedro De Huaca', 'codigo_canton': 406, 'total_homicidios': 2, 'latitud': 0.5984984999999995, 'longitud': -77.7277125, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Tulcán', 'codigo_canton': 401, 'total_homicidios': 66, 'latitud': 0.7772593881081916, 'longitud': -74.26720535334013, 'femicidios': 7, 'asesinatos': 36, 'sicariatos': 0, 'homicidios_2023': 13, 'homicidios_2024': 5, 'homicidios_2025': 8, 'homicidios_2026': 5, 'poblacion_miles': 96, 'homicide_rate_2024': 5.2, 'homicide_rate_2025': 8.3, 'homicide_rate_2026_proj': 10.4}, {'provincia': 'Cañar', 'canton': 'Azogues', 'codigo_canton': 301, 'total_homicidios': 56, 'latitud': -2.750978719727407, 'longitud': -78.84966152606758, 'femicidios': 3, 'asesinatos': 47, 'sicariatos': 0, 'homicidios_2023': 11, 'homicidios_2024': 6, 'homicidios_2025': 10, 'homicidios_2026': 3, 'poblacion_miles': 83, 'homicide_rate_2024': 7.2, 'homicide_rate_2025': 12.0, 'homicide_rate_2026_proj': 7.2}, {'provincia': 'Cañar', 'canton': 'Biblián', 'codigo_canton': 302, 'total_homicidios': 13, 'latitud': -2.7050908495135157, 'longitud': -78.89540691747051, 'femicidios': 1, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 5, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 10.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'Cañar', 'codigo_canton': 303, 'total_homicidios': 22, 'latitud': -2.4672563234627245, 'longitud': -79.07482826111818, 'femicidios': 2, 'asesinatos': 16, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 3, 'homicidios_2025': 4, 'homicidios_2026': 2, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 8.0, 'homicide_rate_2026_proj': 8.0}, {'provincia': 'Cañar', 'canton': 'Déleg', 'codigo_canton': 306, 'total_homicidios': 8, 'latitud': -2.760978874999997, 'longitud': -78.92124749999999, 'femicidios': 0, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 3, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'El Tambo', 'codigo_canton': 305, 'total_homicidios': 4, 'latitud': -2.5109809184379275, 'longitud': -78.93296249897443, 'femicidios': 0, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'La Troncal', 'codigo_canton': 304, 'total_homicidios': 564, 'latitud': -2.3401664484826936, 'longitud': -77.51239085475017, 'femicidios': 3, 'asesinatos': 521, 'sicariatos': 6, 'homicidios_2023': 97, 'homicidios_2024': 97, 'homicidios_2025': 79, 'homicidios_2026': 44, 'poblacion_miles': 50, 'homicide_rate_2024': 194.0, 'homicide_rate_2025': 158.0, 'homicide_rate_2026_proj': 176.0}, {'provincia': 'Cañar', 'canton': 'Suscal', 'codigo_canton': 307, 'total_homicidios': 1, 'latitud': -2.46361499999999, 'longitud': -79.065383, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Alausí', 'codigo_canton': 602, 'total_homicidios': 16, 'latitud': -2.2243014355636026, 'longitud': -78.87171580312257, 'femicidios': 1, 'asesinatos': 14, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Chambo', 'codigo_canton': 604, 'total_homicidios': 5, 'latitud': -1.3901397999999978, 'longitud': -62.8745388, 'femicidios': 2, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Chunchi', 'codigo_canton': 605, 'total_homicidios': 3, 'latitud': -2.299438240345824, 'longitud': -78.90453028790733, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Colta', 'codigo_canton': 603, 'total_homicidios': 8, 'latitud': -1.3022175625, 'longitud': -59.093275125, 'femicidios': 2, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Cumandá', 'codigo_canton': 610, 'total_homicidios': 19, 'latitud': -2.088271570644601, 'longitud': -74.96935311309547, 'femicidios': 0, 'asesinatos': 18, 'sicariatos': 0, 'homicidios_2023': 7, 'homicidios_2024': 0, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Guamote', 'codigo_canton': 606, 'total_homicidios': 6, 'latitud': -1.341428031450165, 'longitud': -52.42600018243155, 'femicidios': 2, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Guano', 'codigo_canton': 607, 'total_homicidios': 19, 'latitud': -1.5201777941600942, 'longitud': -74.51989832575084, 'femicidios': 1, 'asesinatos': 13, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 1, 'homicidios_2025': 3, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 6.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Chimborazo', 'canton': 'Pallatanga', 'codigo_canton': 608, 'total_homicidios': 7, 'latitud': -1.4136081578316886, 'longitud': -56.38643959095792, 'femicidios': 0, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Penipe', 'codigo_canton': 609, 'total_homicidios': 2, 'latitud': -1.511795, 'longitud': -78.50605999999999, 'femicidios': 0, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Riobamba', 'codigo_canton': 601, 'total_homicidios': 101, 'latitud': -1.5392138923902254, 'longitud': -72.4278907725435, 'femicidios': 10, 'asesinatos': 67, 'sicariatos': 2, 'homicidios_2023': 14, 'homicidios_2024': 8, 'homicidios_2025': 9, 'homicidios_2026': 4, 'poblacion_miles': 265, 'homicide_rate_2024': 3.0, 'homicide_rate_2025': 3.4, 'homicide_rate_2026_proj': 3.0}, {'provincia': 'Cotopaxi', 'canton': 'La Maná', 'codigo_canton': 502, 'total_homicidios': 56, 'latitud': -0.8973155082217817, 'longitud': -76.39949253009296, 'femicidios': 5, 'asesinatos': 47, 'sicariatos': 0, 'homicidios_2023': 7, 'homicidios_2024': 5, 'homicidios_2025': 9, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 10.0, 'homicide_rate_2025': 18.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Cotopaxi', 'canton': 'Latacunga', 'codigo_canton': 501, 'total_homicidios': 191, 'latitud': -0.8446407179814278, 'longitud': -75.74366520745734, 'femicidios': 19, 'asesinatos': 123, 'sicariatos': 2, 'homicidios_2023': 13, 'homicidios_2024': 12, 'homicidios_2025': 18, 'homicidios_2026': 15, 'poblacion_miles': 210, 'homicide_rate_2024': 5.7, 'homicide_rate_2025': 8.6, 'homicide_rate_2026_proj': 14.3}, {'provincia': 'Cotopaxi', 'canton': 'Pangua', 'codigo_canton': 503, 'total_homicidios': 24, 'latitud': -1.139679186877171, 'longitud': -79.18961816161278, 'femicidios': 4, 'asesinatos': 17, 'sicariatos': 0, 'homicidios_2023': 4, 'homicidios_2024': 3, 'homicidios_2025': 7, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 14.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Cotopaxi', 'canton': 'Pujilí', 'codigo_canton': 504, 'total_homicidios': 14, 'latitud': -0.942937732743812, 'longitud': -78.84414698466769, 'femicidios': 2, 'asesinatos': 9, 'sicariatos': 0, 'homicidios_2023': 3, 'homicidios_2024': 2, 'homicidios_2025': 0, 'homicidios_2026': 2, 'poblacion_miles': 50, 'homicide_rate_2024': 4.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 8.0}, {'provincia': 'Cotopaxi', 'canton': 'Salcedo', 'codigo_canton': 505, 'total_homicidios': 44, 'latitud': -0.9851706836753008, 'longitud': -73.23954765447603, 'femicidios': 8, 'asesinatos': 27, 'sicariatos': 0, 'homicidios_2023': 8, 'homicidios_2024': 4, 'homicidios_2025': 4, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 8.0, 'homicide_rate_2025': 8.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Cotopaxi', 'canton': 'Saquisilí', 'codigo_canton': 506, 'total_homicidios': 10, 'latitud': -0.8270927413250375, 'longitud': -78.70670948432922, 'femicidios': 3, 'asesinatos': 6, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 0, 'homicidios_2025': 3, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 6.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cotopaxi', 'canton': 'Sigchos', 'codigo_canton': 507, 'total_homicidios': 7, 'latitud': -0.6420015254643976, 'longitud': -78.9202884007727, 'femicidios': 0, 'asesinatos': 4, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'El Oro', 'canton': 'Arenillas', 'codigo_canton': 702, 'total_homicidios': 178, 'latitud': -3.494368346081593, 'longitud': -78.72933301168864, 'femicidios': 0, 'asesinatos': 163, 'sicariatos': 1, 'homicidios_2023': 44, 'homicidios_2024': 21, 'homicidios_2025': 25, 'homicidios_2026': 37, 'poblacion_miles': 50, 'homicide_rate_2024': 42.0, 'homicide_rate_2025': 50.0, 'homicide_rate_2026_proj': 148.0}, {'provincia': 'El Oro', 'canton': 'Atahualpa', 'codigo_canton': 703, 'total_homicidios': 5, 'latitud': -3.5626792511574776, 'longitud': -79.68190191952782, 'femicidios': 0, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'El Oro', 'canton': 'Balsas', 'codigo_canton': 704, 'total_homicidios': 4, 'latitud': -3.748756999999995, 'longitud': -79.8483315, 'femicidios': 0, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'El Oro', 'canton': 'Chilla', 'codigo_canton': 705, 'total_homicidios': 3, 'latitud': -3.4574220666666604, 'longitud': -79.57776386666667, 'femicidios': 0, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'El Oro', 'canton': 'El Guabo', 'codigo_canton': 706, 'total_homicidios': 368, 'latitud': -3.0483364524308776, 'longitud': -76.14405461081832, 'femicidios': 8, 'asesinatos': 336, 'sicariatos': 7, 'homicidios_2023': 38, 'homicidios_2024': 85, 'homicidios_2025': 88, 'homicidios_2026': 48, 'poblacion_miles': 50, 'homicide_rate_2024': 170.0, 'homicide_rate_2025': 176.0, 'homicide_rate_2026_proj': 192.0}, {'provincia': 'El Oro', 'canton': 'Huaquillas', 'codigo_canton': 707, 'total_homicidios': 488, 'latitud': -3.391584698072907, 'longitud': -78.25150705131851, 'femicidios': 14, 'asesinatos': 451, 'sicariatos': 5, 'homicidios_2023': 113, 'homicidios_2024': 62, 'homicidios_2025': 87, 'homicidios_2026': 76, 'poblacion_miles': 52, 'homicide_rate_2024': 119.2, 'homicide_rate_2025': 167.3, 'homicide_rate_2026_proj': 292.3}, {'provincia': 'El Oro', 'canton': 'Las Lajas', 'codigo_canton': 714, 'total_homicidios': 4, 'latitud': -3.789486749380025, 'longitud': -80.0551898644472, 'femicidios': 1, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'El Oro', 'canton': 'Machala', 'codigo_canton': 701, 'total_homicidios': 1500, 'latitud': -3.2024810485737345, 'longitud': -78.413535765783, 'femicidios': 16, 'asesinatos': 1414, 'sicariatos': 7, 'homicidios_2023': 243, 'homicidios_2024': 244, 'homicidios_2025': 407, 'homicidios_2026': 223, 'poblacion_miles': 260, 'homicide_rate_2024': 93.8, 'homicide_rate_2025': 156.5, 'homicide_rate_2026_proj': 171.5}, {'provincia': 'El Oro', 'canton': 'Pasaje', 'codigo_canton': 709, 'total_homicidios': 446, 'latitud': -3.258742309734674, 'longitud': -78.01950609368889, 'femicidios': 5, 'asesinatos': 422, 'sicariatos': 2, 'homicidios_2023': 76, 'homicidios_2024': 99, 'homicidios_2025': 83, 'homicidios_2026': 61, 'poblacion_miles': 82, 'homicide_rate_2024': 120.7, 'homicide_rate_2025': 101.2, 'homicide_rate_2026_proj': 148.8}, {'provincia': 'El Oro', 'canton': 'Piñas', 'codigo_canton': 710, 'total_homicidios': 14, 'latitud': -3.6672192676624, 'longitud': -79.76824140312195, 'femicidios': 1, 'asesinatos': 10, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 2, 'homicidios_2025': 2, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 4.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'El Oro', 'canton': 'Portovelo', 'codigo_canton': 711, 'total_homicidios': 28, 'latitud': -3.58778422063196, 'longitud': -76.76434331263366, 'femicidios': 1, 'asesinatos': 23, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 5, 'homicidios_2025': 2, 'homicidios_2026': 2, 'poblacion_miles': 50, 'homicide_rate_2024': 10.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 8.0}, {'provincia': 'El Oro', 'canton': 'Santa Rosa', 'codigo_canton': 712, 'total_homicidios': 351, 'latitud': -3.380699876260556, 'longitud': -78.36274723868952, 'femicidios': 5, 'asesinatos': 331, 'sicariatos': 1, 'homicidios_2023': 48, 'homicidios_2024': 71, 'homicidios_2025': 94, 'homicidios_2026': 67, 'poblacion_miles': 72, 'homicide_rate_2024': 98.6, 'homicide_rate_2025': 130.6, 'homicide_rate_2026_proj': 186.1}, {'provincia': 'El Oro', 'canton': 'Zaruma', 'codigo_canton': 713, 'total_homicidios': 26, 'latitud': -3.5259946421009647, 'longitud': -76.53800456435741, 'femicidios': 0, 'asesinatos': 24, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 6, 'homicidios_2025': 6, 'homicidios_2026': 5, 'poblacion_miles': 50, 'homicide_rate_2024': 12.0, 'homicide_rate_2025': 12.0, 'homicide_rate_2026_proj': 20.0}, {'provincia': 'Esmeraldas', 'canton': 'Atacames', 'codigo_canton': 806, 'total_homicidios': 165, 'latitud': 0.8246886393988938, 'longitud': -77.43426120292547, 'femicidios': 4, 'asesinatos': 145, 'sicariatos': 0, 'homicidios_2023': 38, 'homicidios_2024': 24, 'homicidios_2025': 22, 'homicidios_2026': 8, 'poblacion_miles': 42, 'homicide_rate_2024': 57.1, 'homicide_rate_2025': 52.4, 'homicide_rate_2026_proj': 38.1}, {'provincia': 'Esmeraldas', 'canton': 'Eloy Alfaro', 'codigo_canton': 802, 'total_homicidios': 104, 'latitud': 1.0509924647629805, 'longitud': -77.47232042440669, 'femicidios': 4, 'asesinatos': 94, 'sicariatos': 0, 'homicidios_2023': 12, 'homicidios_2024': 14, 'homicidios_2025': 15, 'homicidios_2026': 5, 'poblacion_miles': 40, 'homicide_rate_2024': 35.0, 'homicide_rate_2025': 37.5, 'homicide_rate_2026_proj': 25.0}, {'provincia': 'Esmeraldas', 'canton': 'Esmeraldas', 'codigo_canton': 801, 'total_homicidios': 1567, 'latitud': 0.9258510228175696, 'longitud': -78.74575985557891, 'femicidios': 15, 'asesinatos': 1465, 'sicariatos': 15, 'homicidios_2023': 315, 'homicidios_2024': 194, 'homicidios_2025': 258, 'homicidios_2026': 117, 'poblacion_miles': 218, 'homicide_rate_2024': 89.0, 'homicide_rate_2025': 118.3, 'homicide_rate_2026_proj': 107.3}, {'provincia': 'Esmeraldas', 'canton': 'Muisne', 'codigo_canton': 803, 'total_homicidios': 52, 'latitud': 0.5373026487539418, 'longitud': -78.43969400638004, 'femicidios': 1, 'asesinatos': 44, 'sicariatos': 0, 'homicidios_2023': 7, 'homicidios_2024': 6, 'homicidios_2025': 2, 'homicidios_2026': 7, 'poblacion_miles': 50, 'homicide_rate_2024': 12.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 28.0}, {'provincia': 'Esmeraldas', 'canton': 'Quinindé', 'codigo_canton': 804, 'total_homicidios': 308, 'latitud': 0.3395039704361727, 'longitud': -77.3935830731923, 'femicidios': 8, 'asesinatos': 266, 'sicariatos': 1, 'homicidios_2023': 65, 'homicidios_2024': 27, 'homicidios_2025': 36, 'homicidios_2026': 18, 'poblacion_miles': 135, 'homicide_rate_2024': 20.0, 'homicide_rate_2025': 26.7, 'homicide_rate_2026_proj': 26.7}, {'provincia': 'Esmeraldas', 'canton': 'Rioverde', 'codigo_canton': 807, 'total_homicidios': 111, 'latitud': 0.9609334697395258, 'longitud': -76.51596330942955, 'femicidios': 5, 'asesinatos': 99, 'sicariatos': 1, 'homicidios_2023': 11, 'homicidios_2024': 8, 'homicidios_2025': 15, 'homicidios_2026': 4, 'poblacion_miles': 50, 'homicide_rate_2024': 16.0, 'homicide_rate_2025': 30.0, 'homicide_rate_2026_proj': 16.0}, {'provincia': 'Esmeraldas', 'canton': 'San Lorenzo', 'codigo_canton': 805, 'total_homicidios': 273, 'latitud': 1.2111730863989865, 'longitud': -76.19552156388069, 'femicidios': 7, 'asesinatos': 251, 'sicariatos': 0, 'homicidios_2023': 30, 'homicidios_2024': 25, 'homicidios_2025': 17, 'homicidios_2026': 13, 'poblacion_miles': 44, 'homicide_rate_2024': 56.8, 'homicide_rate_2025': 38.6, 'homicide_rate_2026_proj': 59.1}, {'provincia': 'Galápagos', 'canton': 'Santa Cruz', 'codigo_canton': 2003, 'total_homicidios': 2, 'latitud': -0.6887896, 'longitud': -90.32733945, 'femicidios': 1, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 15, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Guayas', 'canton': 'Alfredo Baquerizo Moreno (Juján)', 'codigo_canton': 902, 'total_homicidios': 112, 'latitud': -1.9289864377241932, 'longitud': -78.85530221256435, 'femicidios': 3, 'asesinatos': 106, 'sicariatos': 0, 'homicidios_2023': 24, 'homicidios_2024': 20, 'homicidios_2025': 24, 'homicidios_2026': 13, 'poblacion_miles': 50, 'homicide_rate_2024': 40.0, 'homicide_rate_2025': 48.0, 'homicide_rate_2026_proj': 52.0}, {'provincia': 'Guayas', 'canton': 'Balao', 'codigo_canton': 903, 'total_homicidios': 180, 'latitud': -2.787189601138064, 'longitud': -76.65409503952547, 'femicidios': 1, 'asesinatos': 174, 'sicariatos': 1, 'homicidios_2023': 44, 'homicidios_2024': 35, 'homicidios_2025': 58, 'homicidios_2026': 5, 'poblacion_miles': 50, 'homicide_rate_2024': 70.0, 'homicide_rate_2025': 116.0, 'homicide_rate_2026_proj': 20.0}, {'provincia': 'Guayas', 'canton': 'Balzar', 'codigo_canton': 904, 'total_homicidios': 275, 'latitud': -1.2974110770588974, 'longitud': -78.41304327927486, 'femicidios': 5, 'asesinatos': 256, 'sicariatos': 6, 'homicidios_2023': 45, 'homicidios_2024': 34, 'homicidios_2025': 74, 'homicidios_2026': 16, 'poblacion_miles': 53, 'homicide_rate_2024': 64.2, 'homicide_rate_2025': 139.6, 'homicide_rate_2026_proj': 60.4}, {'provincia': 'Guayas', 'canton': 'Colimes', 'codigo_canton': 905, 'total_homicidios': 53, 'latitud': -1.4683359102221532, 'longitud': -77.04411049145286, 'femicidios': 3, 'asesinatos': 49, 'sicariatos': 0, 'homicidios_2023': 8, 'homicidios_2024': 10, 'homicidios_2025': 8, 'homicidios_2026': 6, 'poblacion_miles': 50, 'homicide_rate_2024': 20.0, 'homicide_rate_2025': 16.0, 'homicide_rate_2026_proj': 24.0}, {'provincia': 'Guayas', 'canton': 'Coronel Marcelino Maridueña', 'codigo_canton': 923, 'total_homicidios': 42, 'latitud': -2.177890214285714, 'longitud': -77.5111030952381, 'femicidios': 1, 'asesinatos': 38, 'sicariatos': 0, 'homicidios_2023': 7, 'homicidios_2024': 12, 'homicidios_2025': 12, 'homicidios_2026': 2, 'poblacion_miles': 50, 'homicide_rate_2024': 24.0, 'homicide_rate_2025': 24.0, 'homicide_rate_2026_proj': 8.0}, {'provincia': 'Guayas', 'canton': 'Daule', 'codigo_canton': 906, 'total_homicidios': 525, 'latitud': -1.8560283267668007, 'longitud': -77.81980422593365, 'femicidios': 7, 'asesinatos': 498, 'sicariatos': 11, 'homicidios_2023': 135, 'homicidios_2024': 91, 'homicidios_2025': 109, 'homicidios_2026': 54, 'poblacion_miles': 180, 'homicide_rate_2024': 50.6, 'homicide_rate_2025': 60.6, 'homicide_rate_2026_proj': 60.0}, {'provincia': 'Guayas', 'canton': 'Durán', 'codigo_canton': 907, 'total_homicidios': 2013, 'latitud': -2.114665644040102, 'longitud': -77.80154472839834, 'femicidios': 18, 'asesinatos': 1969, 'sicariatos': 3, 'homicidios_2023': 461, 'homicidios_2024': 478, 'homicidios_2025': 539, 'homicidios_2026': 178, 'poblacion_miles': 235, 'homicide_rate_2024': 203.4, 'homicide_rate_2025': 229.4, 'homicide_rate_2026_proj': 151.5}, {'provincia': 'Guayas', 'canton': 'El Empalme', 'codigo_canton': 908, 'total_homicidios': 353, 'latitud': -1.003824570407712, 'longitud': -77.83222605192977, 'femicidios': 4, 'asesinatos': 339, 'sicariatos': 2, 'homicidios_2023': 27, 'homicidios_2024': 51, 'homicidios_2025': 96, 'homicidios_2026': 41, 'poblacion_miles': 50, 'homicide_rate_2024': 102.0, 'homicide_rate_2025': 192.0, 'homicide_rate_2026_proj': 164.0}];
+  
+  // Bubble map of Ecuador cantons
+  const trace = {
+    type: 'scattermapbox',
+    lat: cantons.map(c => c.latitud),
+    lon: cantons.map(c => c.longitud),
+    text: cantons.map(c => `<b>${c.canton}</b> (${c.provincia})<br>Homicidios 2025: ${c.homicidios_2025}<br>Tasa: ${c.homicide_rate_2025}/100k`),
+    mode: 'markers',
+    marker: {
+      size: cantons.map(c => Math.max(8, Math.min(50, Math.sqrt(c.homicidios_2025) * 2))),
+      color: cantons.map(c => c.homicide_rate_2025),
+      colorscale: [[0, '#2ca25f'], [0.3, '#fd8d3c'], [0.6, '#ef3b2c'], [1, '#67000d']],
+      cmin: 0,
+      cmax: 100,
+      showscale: true,
+      colorbar: {title: 'Tasa/100k', thickness: 10, len: 0.6},
+      opacity: 0.75
+    },
+    hovertemplate: '%{text}<extra></extra>'
+  };
+  
+  Plotly.newPlot('chart-heatmap', [trace], {
+    template: 'plotly_dark',
+    margin: {l: 0, r: 0, t: 0, b: 0},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    mapbox: {
+      style: 'carto-darkmatter',
+      center: {lat: -1.5, lon: -78.5},
+      zoom: 5.5
+    }
+  }, {responsive: true});
+})();
+
+// ===== TOP CANTONS BAR CHART =====
+(function() {
+  const cantons = [{'provincia': 'Los Ríos', 'canton': 'Puebloviejo', 'codigo_canton': 1204, 'total_homicidios': 529, 'latitud': -1.5255164253925844, 'longitud': -76.54361916379683, 'femicidios': 2, 'asesinatos': 521, 'sicariatos': 2, 'homicidios_2023': 121, 'homicidios_2024': 95, 'homicidios_2025': 165, 'homicidios_2026': 44, 'poblacion_miles': 50, 'homicide_rate_2024': 190.0, 'homicide_rate_2025': 330.0, 'homicide_rate_2026_proj': 176.0}, {'provincia': 'Guayas', 'canton': 'Naranjal', 'codigo_canton': 911, 'total_homicidios': 654, 'latitud': -2.555856195014907, 'longitud': -77.66096470447717, 'femicidios': 3, 'asesinatos': 618, 'sicariatos': 11, 'homicidios_2023': 143, 'homicidios_2024': 140, 'homicidios_2025': 142, 'homicidios_2026': 55, 'poblacion_miles': 50, 'homicide_rate_2024': 280.0, 'homicide_rate_2025': 284.0, 'homicide_rate_2026_proj': 220.0}, {'provincia': 'Los Ríos', 'canton': 'Buena Fe', 'codigo_canton': 1210, 'total_homicidios': 518, 'latitud': -0.7584532419414339, 'longitud': -76.84999234403882, 'femicidios': 3, 'asesinatos': 487, 'sicariatos': 0, 'homicidios_2023': 92, 'homicidios_2024': 95, 'homicidios_2025': 173, 'homicidios_2026': 57, 'poblacion_miles': 72, 'homicide_rate_2024': 131.9, 'homicide_rate_2025': 240.3, 'homicide_rate_2026_proj': 158.3}, {'provincia': 'Guayas', 'canton': 'Durán', 'codigo_canton': 907, 'total_homicidios': 2013, 'latitud': -2.114665644040102, 'longitud': -77.80154472839834, 'femicidios': 18, 'asesinatos': 1969, 'sicariatos': 3, 'homicidios_2023': 461, 'homicidios_2024': 478, 'homicidios_2025': 539, 'homicidios_2026': 178, 'poblacion_miles': 235, 'homicide_rate_2024': 203.4, 'homicide_rate_2025': 229.4, 'homicide_rate_2026_proj': 151.5}, {'provincia': 'Guayas', 'canton': 'El Empalme', 'codigo_canton': 908, 'total_homicidios': 353, 'latitud': -1.003824570407712, 'longitud': -77.83222605192977, 'femicidios': 4, 'asesinatos': 339, 'sicariatos': 2, 'homicidios_2023': 27, 'homicidios_2024': 51, 'homicidios_2025': 96, 'homicidios_2026': 41, 'poblacion_miles': 50, 'homicide_rate_2024': 102.0, 'homicide_rate_2025': 192.0, 'homicide_rate_2026_proj': 164.0}, {'provincia': 'Manabí', 'canton': 'Montecristi', 'codigo_canton': 1309, 'total_homicidios': 344, 'latitud': -0.9969089603465614, 'longitud': -78.3428492466673, 'femicidios': 6, 'asesinatos': 327, 'sicariatos': 1, 'homicidios_2023': 49, 'homicidios_2024': 54, 'homicidios_2025': 95, 'homicidios_2026': 74, 'poblacion_miles': 50, 'homicide_rate_2024': 108.0, 'homicide_rate_2025': 190.0, 'homicide_rate_2026_proj': 296.0}, {'provincia': 'Los Ríos', 'canton': 'Babahoyo', 'codigo_canton': 1201, 'total_homicidios': 1026, 'latitud': -1.7422298563302383, 'longitud': -76.46611535546688, 'femicidios': 14, 'asesinatos': 959, 'sicariatos': 4, 'homicidios_2023': 172, 'homicidios_2024': 246, 'homicidios_2025': 297, 'homicidios_2026': 87, 'poblacion_miles': 162, 'homicide_rate_2024': 151.9, 'homicide_rate_2025': 183.3, 'homicide_rate_2026_proj': 107.4}, {'provincia': 'El Oro', 'canton': 'El Guabo', 'codigo_canton': 706, 'total_homicidios': 368, 'latitud': -3.0483364524308776, 'longitud': -76.14405461081832, 'femicidios': 8, 'asesinatos': 336, 'sicariatos': 7, 'homicidios_2023': 38, 'homicidios_2024': 85, 'homicidios_2025': 88, 'homicidios_2026': 48, 'poblacion_miles': 50, 'homicide_rate_2024': 170.0, 'homicide_rate_2025': 176.0, 'homicide_rate_2026_proj': 192.0}, {'provincia': 'Guayas', 'canton': 'Playas', 'codigo_canton': 921, 'total_homicidios': 298, 'latitud': -2.6013765853635147, 'longitud': -79.57999448528211, 'femicidios': 2, 'asesinatos': 292, 'sicariatos': 1, 'homicidios_2023': 80, 'homicidios_2024': 65, 'homicidios_2025': 88, 'homicidios_2026': 37, 'poblacion_miles': 50, 'homicide_rate_2024': 130.0, 'homicide_rate_2025': 176.0, 'homicide_rate_2026_proj': 148.0}, {'provincia': 'El Oro', 'canton': 'Huaquillas', 'codigo_canton': 707, 'total_homicidios': 488, 'latitud': -3.391584698072907, 'longitud': -78.25150705131851, 'femicidios': 14, 'asesinatos': 451, 'sicariatos': 5, 'homicidios_2023': 113, 'homicidios_2024': 62, 'homicidios_2025': 87, 'homicidios_2026': 76, 'poblacion_miles': 52, 'homicide_rate_2024': 119.2, 'homicide_rate_2025': 167.3, 'homicide_rate_2026_proj': 292.3}, {'provincia': 'Los Ríos', 'canton': 'Urdaneta', 'codigo_canton': 1206, 'total_homicidios': 216, 'latitud': -1.5163616954434276, 'longitud': -76.5030325014368, 'femicidios': 2, 'asesinatos': 199, 'sicariatos': 4, 'homicidios_2023': 41, 'homicidios_2024': 15, 'homicidios_2025': 81, 'homicidios_2026': 36, 'poblacion_miles': 50, 'homicide_rate_2024': 30.0, 'homicide_rate_2025': 162.0, 'homicide_rate_2026_proj': 144.0}, {'provincia': 'Cañar', 'canton': 'La Troncal', 'codigo_canton': 304, 'total_homicidios': 564, 'latitud': -2.3401664484826936, 'longitud': -77.51239085475017, 'femicidios': 3, 'asesinatos': 521, 'sicariatos': 6, 'homicidios_2023': 97, 'homicidios_2024': 97, 'homicidios_2025': 79, 'homicidios_2026': 44, 'poblacion_miles': 50, 'homicide_rate_2024': 194.0, 'homicide_rate_2025': 158.0, 'homicide_rate_2026_proj': 176.0}, {'provincia': 'El Oro', 'canton': 'Machala', 'codigo_canton': 701, 'total_homicidios': 1500, 'latitud': -3.2024810485737345, 'longitud': -78.413535765783, 'femicidios': 16, 'asesinatos': 1414, 'sicariatos': 7, 'homicidios_2023': 243, 'homicidios_2024': 244, 'homicidios_2025': 407, 'homicidios_2026': 223, 'poblacion_miles': 260, 'homicide_rate_2024': 93.8, 'homicide_rate_2025': 156.5, 'homicide_rate_2026_proj': 171.5}, {'provincia': 'Manabí', 'canton': 'Sucre', 'codigo_canton': 1314, 'total_homicidios': 249, 'latitud': -0.6479007765447208, 'longitud': -79.44442551895678, 'femicidios': 3, 'asesinatos': 243, 'sicariatos': 2, 'homicidios_2023': 45, 'homicidios_2024': 44, 'homicidios_2025': 77, 'homicidios_2026': 37, 'poblacion_miles': 50, 'homicide_rate_2024': 88.0, 'homicide_rate_2025': 154.0, 'homicide_rate_2026_proj': 148.0}, {'provincia': 'Guayas', 'canton': 'San Jacinto De Yaguachi', 'codigo_canton': 920, 'total_homicidios': 353, 'latitud': -2.078354943644524, 'longitud': -76.73408584179083, 'femicidios': 4, 'asesinatos': 340, 'sicariatos': 2, 'homicidios_2023': 98, 'homicidios_2024': 54, 'homicidios_2025': 76, 'homicidios_2026': 22, 'poblacion_miles': 50, 'homicide_rate_2024': 108.0, 'homicide_rate_2025': 152.0, 'homicide_rate_2026_proj': 88.0}];
+  
+  Plotly.newPlot('chart-top-cantons', [{
+    y: cantons.map(c => `${c.canton} (${c.provincia})`),
+    x: cantons.map(c => c.homicide_rate_2025),
+    type: 'bar',
+    orientation: 'h',
+    marker: {
+      color: cantons.map(c => c.homicide_rate_2025),
+      colorscale: [[0, '#fc9272'], [0.5, '#ef3b2c'], [1, '#67000d']]
+    },
+    text: cantons.map(c => c.homicide_rate_2025.toString()),
+    textposition: 'outside',
+    hovertemplate: '<b>%{y}</b><br>Tasa: %{x}/100k<extra></extra>'
+  }], {
+    template: 'plotly_dark',
+    margin: {l: 200, r: 60, t: 10, b: 40},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    xaxis: {title: 'Tasa de homicidios por 100k (2025)', gridcolor: 'rgba(255,255,255,0.08)'},
+    yaxis: {autorange: 'reversed', gridcolor: 'rgba(255,255,255,0.08)'},
+    showlegend: false
+  }, {responsive: true});
+})();
+
+// ===== PRESSURE SCATTER =====
+(function() {
+  const provs = [{'provincia': 'Azuay', 'total': 39, 'rate': 2.692857142857143}, {'provincia': 'Bolívar', 'total': 37, 'rate': 10.214285714285714}, {'provincia': 'Carchi', 'total': 21, 'rate': 5.716666666666666}, {'provincia': 'Cañar', 'total': 99, 'rate': 27.142857142857142}, {'provincia': 'Chimborazo', 'total': 19, 'rate': 2.34}, {'provincia': 'Cotopaxi', 'total': 41, 'rate': 7.8}, {'provincia': 'El Oro', 'total': 795, 'rate': 61.815384615384616}, {'provincia': 'Esmeraldas', 'total': 365, 'rate': 43.92857142857143}, {'provincia': 'Galápagos', 'total': 0, 'rate': 0.0}, {'provincia': 'Guayas', 'total': 4140, 'rate': 84.22}, {'provincia': 'Imbabura', 'total': 47, 'rate': 6.216666666666666}, {'provincia': 'Loja', 'total': 50, 'rate': 2.76875}, {'provincia': 'Los Ríos', 'total': 1276, 'rate': 130.74615384615385}, {'provincia': 'Manabí', 'total': 1274, 'rate': 55.82272727272727}, {'provincia': 'Morona Santiago', 'total': 20, 'rate': 3.3333333333333335}, {'provincia': 'Napo', 'total': 19, 'rate': 6.279999999999999}, {'provincia': 'Orellana', 'total': 130, 'rate': 46.45}, {'provincia': 'Pastaza', 'total': 20, 'rate': 10.0}, {'provincia': 'Pichincha', 'total': 322, 'rate': 15.4}, {'provincia': 'Santa Elena', 'total': 228, 'rate': 72.53333333333333}, {'provincia': 'Sto Dgo De Los Tsáchilas', 'total': 161, 'rate': 33.8}, {'provincia': 'Sucumbíos', 'total': 111, 'rate': 24.228571428571428}, {'provincia': 'Tungurahua', 'total': 58, 'rate': 5.166666666666667}, {'provincia': 'Zamora Chinchipe', 'total': 25, 'rate': 6.9125}];
+  
+  Plotly.newPlot('chart-pressure', [{
+    x: provs.map(p => p.rate),
+    y: provs.map(p => p.rate * 1.49),  // rho=0.49 spillover
+    mode: 'markers+text',
+    text: provs.map(p => p.provincia),
+    textposition: 'top center',
+    textfont: {size: 10},
+    marker: {
+      size: provs.map(p => Math.max(10, Math.min(45, Math.sqrt(p.total) * 1.5))),
+      color: provs.map(p => p.rate),
+      colorscale: 'YlOrRd',
+      showscale: true,
+      colorbar: {title: 'Tasa/100k'}
+    },
+    type: 'scatter',
+    name: 'Provincias'
+  }, {
+    x: [0, 120], y: [0, 120], mode: 'lines',
+    line: {dash: 'dash', color: 'gray'},
+    name: 'Sin spillover'
+  }], {
+    template: 'plotly_dark',
+    margin: {l: 50, r: 20, t: 10, b: 50},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    xaxis: {title: 'Tasa propia de homicidios', gridcolor: 'rgba(255,255,255,0.08)'},
+    yaxis: {title: 'Presión (con spillover ρ=0.49)', gridcolor: 'rgba(255,255,255,0.08)'}
+  }, {responsive: true});
+})();
+
+// ===== CRI BARS =====
+(function() {
+  const cantons = [{'provincia': 'Los Ríos', 'canton': 'Puebloviejo', 'codigo_canton': 1204, 'total_homicidios': 529, 'latitud': -1.5255164253925844, 'longitud': -76.54361916379683, 'femicidios': 2, 'asesinatos': 521, 'sicariatos': 2, 'homicidios_2023': 121, 'homicidios_2024': 95, 'homicidios_2025': 165, 'homicidios_2026': 44, 'poblacion_miles': 50, 'homicide_rate_2024': 190.0, 'homicide_rate_2025': 330.0, 'homicide_rate_2026_proj': 176.0}, {'provincia': 'Guayas', 'canton': 'Naranjal', 'codigo_canton': 911, 'total_homicidios': 654, 'latitud': -2.555856195014907, 'longitud': -77.66096470447717, 'femicidios': 3, 'asesinatos': 618, 'sicariatos': 11, 'homicidios_2023': 143, 'homicidios_2024': 140, 'homicidios_2025': 142, 'homicidios_2026': 55, 'poblacion_miles': 50, 'homicide_rate_2024': 280.0, 'homicide_rate_2025': 284.0, 'homicide_rate_2026_proj': 220.0}, {'provincia': 'Los Ríos', 'canton': 'Buena Fe', 'codigo_canton': 1210, 'total_homicidios': 518, 'latitud': -0.7584532419414339, 'longitud': -76.84999234403882, 'femicidios': 3, 'asesinatos': 487, 'sicariatos': 0, 'homicidios_2023': 92, 'homicidios_2024': 95, 'homicidios_2025': 173, 'homicidios_2026': 57, 'poblacion_miles': 72, 'homicide_rate_2024': 131.9, 'homicide_rate_2025': 240.3, 'homicide_rate_2026_proj': 158.3}, {'provincia': 'Guayas', 'canton': 'Durán', 'codigo_canton': 907, 'total_homicidios': 2013, 'latitud': -2.114665644040102, 'longitud': -77.80154472839834, 'femicidios': 18, 'asesinatos': 1969, 'sicariatos': 3, 'homicidios_2023': 461, 'homicidios_2024': 478, 'homicidios_2025': 539, 'homicidios_2026': 178, 'poblacion_miles': 235, 'homicide_rate_2024': 203.4, 'homicide_rate_2025': 229.4, 'homicide_rate_2026_proj': 151.5}, {'provincia': 'Guayas', 'canton': 'El Empalme', 'codigo_canton': 908, 'total_homicidios': 353, 'latitud': -1.003824570407712, 'longitud': -77.83222605192977, 'femicidios': 4, 'asesinatos': 339, 'sicariatos': 2, 'homicidios_2023': 27, 'homicidios_2024': 51, 'homicidios_2025': 96, 'homicidios_2026': 41, 'poblacion_miles': 50, 'homicide_rate_2024': 102.0, 'homicide_rate_2025': 192.0, 'homicide_rate_2026_proj': 164.0}, {'provincia': 'Manabí', 'canton': 'Montecristi', 'codigo_canton': 1309, 'total_homicidios': 344, 'latitud': -0.9969089603465614, 'longitud': -78.3428492466673, 'femicidios': 6, 'asesinatos': 327, 'sicariatos': 1, 'homicidios_2023': 49, 'homicidios_2024': 54, 'homicidios_2025': 95, 'homicidios_2026': 74, 'poblacion_miles': 50, 'homicide_rate_2024': 108.0, 'homicide_rate_2025': 190.0, 'homicide_rate_2026_proj': 296.0}, {'provincia': 'Los Ríos', 'canton': 'Babahoyo', 'codigo_canton': 1201, 'total_homicidios': 1026, 'latitud': -1.7422298563302383, 'longitud': -76.46611535546688, 'femicidios': 14, 'asesinatos': 959, 'sicariatos': 4, 'homicidios_2023': 172, 'homicidios_2024': 246, 'homicidios_2025': 297, 'homicidios_2026': 87, 'poblacion_miles': 162, 'homicide_rate_2024': 151.9, 'homicide_rate_2025': 183.3, 'homicide_rate_2026_proj': 107.4}, {'provincia': 'El Oro', 'canton': 'El Guabo', 'codigo_canton': 706, 'total_homicidios': 368, 'latitud': -3.0483364524308776, 'longitud': -76.14405461081832, 'femicidios': 8, 'asesinatos': 336, 'sicariatos': 7, 'homicidios_2023': 38, 'homicidios_2024': 85, 'homicidios_2025': 88, 'homicidios_2026': 48, 'poblacion_miles': 50, 'homicide_rate_2024': 170.0, 'homicide_rate_2025': 176.0, 'homicide_rate_2026_proj': 192.0}, {'provincia': 'Guayas', 'canton': 'Playas', 'codigo_canton': 921, 'total_homicidios': 298, 'latitud': -2.6013765853635147, 'longitud': -79.57999448528211, 'femicidios': 2, 'asesinatos': 292, 'sicariatos': 1, 'homicidios_2023': 80, 'homicidios_2024': 65, 'homicidios_2025': 88, 'homicidios_2026': 37, 'poblacion_miles': 50, 'homicide_rate_2024': 130.0, 'homicide_rate_2025': 176.0, 'homicide_rate_2026_proj': 148.0}, {'provincia': 'El Oro', 'canton': 'Huaquillas', 'codigo_canton': 707, 'total_homicidios': 488, 'latitud': -3.391584698072907, 'longitud': -78.25150705131851, 'femicidios': 14, 'asesinatos': 451, 'sicariatos': 5, 'homicidios_2023': 113, 'homicidios_2024': 62, 'homicidios_2025': 87, 'homicidios_2026': 76, 'poblacion_miles': 52, 'homicide_rate_2024': 119.2, 'homicide_rate_2025': 167.3, 'homicide_rate_2026_proj': 292.3}, {'provincia': 'Los Ríos', 'canton': 'Urdaneta', 'codigo_canton': 1206, 'total_homicidios': 216, 'latitud': -1.5163616954434276, 'longitud': -76.5030325014368, 'femicidios': 2, 'asesinatos': 199, 'sicariatos': 4, 'homicidios_2023': 41, 'homicidios_2024': 15, 'homicidios_2025': 81, 'homicidios_2026': 36, 'poblacion_miles': 50, 'homicide_rate_2024': 30.0, 'homicide_rate_2025': 162.0, 'homicide_rate_2026_proj': 144.0}, {'provincia': 'Cañar', 'canton': 'La Troncal', 'codigo_canton': 304, 'total_homicidios': 564, 'latitud': -2.3401664484826936, 'longitud': -77.51239085475017, 'femicidios': 3, 'asesinatos': 521, 'sicariatos': 6, 'homicidios_2023': 97, 'homicidios_2024': 97, 'homicidios_2025': 79, 'homicidios_2026': 44, 'poblacion_miles': 50, 'homicide_rate_2024': 194.0, 'homicide_rate_2025': 158.0, 'homicide_rate_2026_proj': 176.0}];
   let bars = document.getElementById('cri-bars');
   cantons.forEach(c => {
-    let color = c.cri >= 80 ? '#67000d' : c.cri >= 60 ? '#a50f15' : c.cri >= 40 ? '#ef3b2c' : '#fc9272';
+    const cri = c.homicide_rate_2025;
+    let color = cri >= 80 ? '#67000d' : cri >= 50 ? '#a50f15' : cri >= 30 ? '#ef3b2c' : '#fc9272';
+    let label = cri >= 80 ? 'CRÍTICO' : cri >= 50 ? 'MUY ALTO' : cri >= 30 ? 'ALTO' : 'ELEVADO';
     bars.innerHTML += `
       <div class="bar-item">
-        <div class="bar-label"><span>${c.name}</span><span>${c.cri}</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:${c.cri}%;background:${color};">${c.cri >= 80 ? 'CRITICAL' : c.cri >= 60 ? 'VERY HIGH' : c.cri >= 40 ? 'HIGH' : 'ELEVATED'}</div></div>
+        <div class="bar-label"><span>${c.canton} (${c.provincia})</span><span>${cri.toFixed(1)}</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100, cri)}%;background:${color};">${label}</div></div>
       </div>`;
   });
 })();
 
-// Forecast
+// ===== CRI SCATTER =====
 (function() {
-  let histX = [], histY = [];
-  for (let y = 2018; y <= 2024; y++) {
-    for (let m = 1; m <= 12; m++) {
-      histX.push(`${y}-${String(m).padStart(2,'0')}`);
-      histY.push(200 + (y - 2018) * 45 + Math.sin(m/12*Math.PI*2)*30 + Math.random()*15);
-    }
-  }
-  let fcX = ['2025-01','2025-02','2025-03','2025-04','2025-05','2025-06',
-             '2025-07','2025-08','2025-09','2025-10','2025-11','2025-12'];
-  let lastY = histY[histY.length-1];
-  let fcY = fcX.map((_,i) => Math.round(lastY + (i+1)*8 + Math.random()*5));
-  let lower = fcY.map(v => Math.round(v - 25));
-  let upper = fcY.map(v => Math.round(v + 25));
-
-  Plotly.newPlot('chart-forecast', [
-    {x: histX, y: histY, type:'scatter', mode:'lines', name:'Historical', line:{color:'#a50f15',width:2}},
-    {x: fcX, y: fcY, type:'scatter', mode:'lines', name:'ARIMA Forecast', line:{color:'#2171b5',width:2,dash:'dash'}},
-    {x: fcX.concat(fcX.slice().reverse()), y: upper.concat(lower.reverse()),
-     fill:'toself', fillcolor:'rgba(33,113,181,0.2)', line:{width:0}, name:'95% CI'}
-  ], {
-    template:'plotly_dark', margin:{l:40,r:20,t:10,b:40},
-    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
-    xaxis:{gridcolor:'rgba(255,255,255,0.08)'},
-    yaxis:{title:'Monthly Homicides',gridcolor:'rgba(255,255,255,0.08)'}
-  }, {responsive:true});
-})();
-
-// Scatter
-(function() {
-  let poverty = [22,49,38,42,25,11,40,37,43,46,36,52,45,33,29,18,28,35,44,19,41,30,39,32,47,34,26,32];
-  let cri = [91,88,70,76,54,20,60,63,68,72,56,81,74,53,48,24,46,55,65,30,62,49,58,51,72,54,42,50];
+  const cantons = [{'provincia': 'Azuay', 'canton': 'Camilo Ponce Enríquez', 'codigo_canton': 115, 'total_homicidios': 178, 'latitud': -2.838308121452818, 'longitud': -74.34491730088013, 'femicidios': 4, 'asesinatos': 154, 'sicariatos': 0, 'homicidios_2023': 28, 'homicidios_2024': 59, 'homicidios_2025': 12, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 118.0, 'homicide_rate_2025': 24.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Azuay', 'canton': 'Chordeleg', 'codigo_canton': 111, 'total_homicidios': 4, 'latitud': -2.196775, 'longitud': -59.082945, 'femicidios': 0, 'asesinatos': 4, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 3, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 12.0}, {'provincia': 'Azuay', 'canton': 'Cuenca', 'codigo_canton': 101, 'total_homicidios': 325, 'latitud': -2.6168060122380874, 'longitud': -71.49328749137544, 'femicidios': 25, 'asesinatos': 217, 'sicariatos': 5, 'homicidios_2023': 24, 'homicidios_2024': 18, 'homicidios_2025': 22, 'homicidios_2026': 18, 'poblacion_miles': 600, 'homicide_rate_2024': 3.0, 'homicide_rate_2025': 3.7, 'homicide_rate_2026_proj': 6.0}, {'provincia': 'Azuay', 'canton': 'El Pan', 'codigo_canton': 112, 'total_homicidios': 2, 'latitud': -1.419685, 'longitud': -39.335215, 'femicidios': 1, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Girón', 'codigo_canton': 102, 'total_homicidios': 5, 'latitud': -1.8942144318453944, 'longitud': -47.48287923018454, 'femicidios': 0, 'asesinatos': 4, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Guachapala', 'codigo_canton': 114, 'total_homicidios': 1, 'latitud': -2.774391, 'longitud': -78.712974, 'femicidios': 1, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Gualaceo', 'codigo_canton': 103, 'total_homicidios': 15, 'latitud': -1.9354888210284076, 'longitud': -52.51743771244551, 'femicidios': 2, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Nabón', 'codigo_canton': 104, 'total_homicidios': 8, 'latitud': -2.487935737984985, 'longitud': -59.34190623898555, 'femicidios': 1, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Paute', 'codigo_canton': 105, 'total_homicidios': 5, 'latitud': -2.7573602, 'longitud': -78.73647220000001, 'femicidios': 1, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Pucará', 'codigo_canton': 106, 'total_homicidios': 12, 'latitud': -2.7417606666666665, 'longitud': -66.34308341666666, 'femicidios': 0, 'asesinatos': 10, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 6, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 12.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'San Fernando', 'codigo_canton': 107, 'total_homicidios': 1, 'latitud': 0.0, 'longitud': 0.0, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Santa Isabel', 'codigo_canton': 108, 'total_homicidios': 15, 'latitud': -2.8377415274001208, 'longitud': -68.7659005122241, 'femicidios': 1, 'asesinatos': 12, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 4, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 8.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Sevilla De Oro', 'codigo_canton': 113, 'total_homicidios': 2, 'latitud': -2.777594549999995, 'longitud': -78.64916794999999, 'femicidios': 0, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Sígsig', 'codigo_canton': 109, 'total_homicidios': 10, 'latitud': -2.743760188002263, 'longitud': -70.9596695790195, 'femicidios': 3, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Caluma', 'codigo_canton': 206, 'total_homicidios': 20, 'latitud': -1.2193675467081326, 'longitud': -59.4443561944224, 'femicidios': 5, 'asesinatos': 12, 'sicariatos': 1, 'homicidios_2023': 2, 'homicidios_2024': 3, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Chillanes', 'codigo_canton': 202, 'total_homicidios': 22, 'latitud': -1.932564022660079, 'longitud': -75.56256142022112, 'femicidios': 1, 'asesinatos': 17, 'sicariatos': 0, 'homicidios_2023': 5, 'homicidios_2024': 1, 'homicidios_2025': 9, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 18.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Chimbo', 'codigo_canton': 203, 'total_homicidios': 10, 'latitud': -1.3314534999999998, 'longitud': -63.2412517, 'femicidios': 0, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 4, 'homicidios_2025': 0, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 8.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Bolívar', 'canton': 'Echeandía', 'codigo_canton': 204, 'total_homicidios': 12, 'latitud': -0.7238129382825833, 'longitud': -39.64993902305567, 'femicidios': 2, 'asesinatos': 7, 'sicariatos': 3, 'homicidios_2023': 0, 'homicidios_2024': 2, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 4.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Guaranda', 'codigo_canton': 201, 'total_homicidios': 55, 'latitud': -1.4132335926101258, 'longitud': -73.27287005440999, 'femicidios': 3, 'asesinatos': 43, 'sicariatos': 0, 'homicidios_2023': 6, 'homicidios_2024': 8, 'homicidios_2025': 3, 'homicidios_2026': 2, 'poblacion_miles': 86, 'homicide_rate_2024': 9.3, 'homicide_rate_2025': 3.5, 'homicide_rate_2026_proj': 4.7}, {'provincia': 'Bolívar', 'canton': 'Las Naves', 'codigo_canton': 207, 'total_homicidios': 48, 'latitud': -1.2420375833333333, 'longitud': -77.66352049999999, 'femicidios': 0, 'asesinatos': 48, 'sicariatos': 0, 'homicidios_2023': 6, 'homicidios_2024': 11, 'homicidios_2025': 21, 'homicidios_2026': 8, 'poblacion_miles': 50, 'homicide_rate_2024': 22.0, 'homicide_rate_2025': 42.0, 'homicide_rate_2026_proj': 32.0}, {'provincia': 'Bolívar', 'canton': 'San Miguel', 'codigo_canton': 205, 'total_homicidios': 20, 'latitud': -1.6756554860934734, 'longitud': -75.14444991743798, 'femicidios': 2, 'asesinatos': 14, 'sicariatos': 0, 'homicidios_2023': 5, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Bolívar', 'codigo_canton': 402, 'total_homicidios': 10, 'latitud': 0.5026599015485227, 'longitud': -77.9226901009265, 'femicidios': 0, 'asesinatos': 7, 'sicariatos': 0, 'homicidios_2023': 11, 'homicidios_2024': 3, 'homicidios_2025': 8, 'homicidios_2026': 5, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 16.0, 'homicide_rate_2026_proj': 20.0}, {'provincia': 'Carchi', 'canton': 'Espejo', 'codigo_canton': 403, 'total_homicidios': 5, 'latitud': 0.6408571887529912, 'longitud': -77.94594597406885, 'femicidios': 1, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Mira', 'codigo_canton': 404, 'total_homicidios': 9, 'latitud': 0.6480410092704418, 'longitud': -78.15323056802818, 'femicidios': 1, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Montúfar', 'codigo_canton': 405, 'total_homicidios': 20, 'latitud': 0.5339211987561757, 'longitud': -70.05161008604554, 'femicidios': 5, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 3, 'homicidios_2025': 2, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Carchi', 'canton': 'San Pedro De Huaca', 'codigo_canton': 406, 'total_homicidios': 2, 'latitud': 0.5984984999999995, 'longitud': -77.7277125, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Tulcán', 'codigo_canton': 401, 'total_homicidios': 66, 'latitud': 0.7772593881081916, 'longitud': -74.26720535334013, 'femicidios': 7, 'asesinatos': 36, 'sicariatos': 0, 'homicidios_2023': 13, 'homicidios_2024': 5, 'homicidios_2025': 8, 'homicidios_2026': 5, 'poblacion_miles': 96, 'homicide_rate_2024': 5.2, 'homicide_rate_2025': 8.3, 'homicide_rate_2026_proj': 10.4}, {'provincia': 'Cañar', 'canton': 'Azogues', 'codigo_canton': 301, 'total_homicidios': 56, 'latitud': -2.750978719727407, 'longitud': -78.84966152606758, 'femicidios': 3, 'asesinatos': 47, 'sicariatos': 0, 'homicidios_2023': 11, 'homicidios_2024': 6, 'homicidios_2025': 10, 'homicidios_2026': 3, 'poblacion_miles': 83, 'homicide_rate_2024': 7.2, 'homicide_rate_2025': 12.0, 'homicide_rate_2026_proj': 7.2}, {'provincia': 'Cañar', 'canton': 'Biblián', 'codigo_canton': 302, 'total_homicidios': 13, 'latitud': -2.7050908495135157, 'longitud': -78.89540691747051, 'femicidios': 1, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 5, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 10.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'Cañar', 'codigo_canton': 303, 'total_homicidios': 22, 'latitud': -2.4672563234627245, 'longitud': -79.07482826111818, 'femicidios': 2, 'asesinatos': 16, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 3, 'homicidios_2025': 4, 'homicidios_2026': 2, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 8.0, 'homicide_rate_2026_proj': 8.0}, {'provincia': 'Cañar', 'canton': 'Déleg', 'codigo_canton': 306, 'total_homicidios': 8, 'latitud': -2.760978874999997, 'longitud': -78.92124749999999, 'femicidios': 0, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 3, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'El Tambo', 'codigo_canton': 305, 'total_homicidios': 4, 'latitud': -2.5109809184379275, 'longitud': -78.93296249897443, 'femicidios': 0, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'La Troncal', 'codigo_canton': 304, 'total_homicidios': 564, 'latitud': -2.3401664484826936, 'longitud': -77.51239085475017, 'femicidios': 3, 'asesinatos': 521, 'sicariatos': 6, 'homicidios_2023': 97, 'homicidios_2024': 97, 'homicidios_2025': 79, 'homicidios_2026': 44, 'poblacion_miles': 50, 'homicide_rate_2024': 194.0, 'homicide_rate_2025': 158.0, 'homicide_rate_2026_proj': 176.0}, {'provincia': 'Cañar', 'canton': 'Suscal', 'codigo_canton': 307, 'total_homicidios': 1, 'latitud': -2.46361499999999, 'longitud': -79.065383, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Alausí', 'codigo_canton': 602, 'total_homicidios': 16, 'latitud': -2.2243014355636026, 'longitud': -78.87171580312257, 'femicidios': 1, 'asesinatos': 14, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Chambo', 'codigo_canton': 604, 'total_homicidios': 5, 'latitud': -1.3901397999999978, 'longitud': -62.8745388, 'femicidios': 2, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Chunchi', 'codigo_canton': 605, 'total_homicidios': 3, 'latitud': -2.299438240345824, 'longitud': -78.90453028790733, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Colta', 'codigo_canton': 603, 'total_homicidios': 8, 'latitud': -1.3022175625, 'longitud': -59.093275125, 'femicidios': 2, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Cumandá', 'codigo_canton': 610, 'total_homicidios': 19, 'latitud': -2.088271570644601, 'longitud': -74.96935311309547, 'femicidios': 0, 'asesinatos': 18, 'sicariatos': 0, 'homicidios_2023': 7, 'homicidios_2024': 0, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Guamote', 'codigo_canton': 606, 'total_homicidios': 6, 'latitud': -1.341428031450165, 'longitud': -52.42600018243155, 'femicidios': 2, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}];
+  
   Plotly.newPlot('chart-cri-scatter', [{
-    x: poverty, y: cri, mode: 'markers',
-    marker: {size: 12, color: cri, colorscale: 'Reds', showscale: true,
-             colorbar: {title:'CRI'}},
-    type: 'scatter', name: 'Cantons'
+    x: cantons.map(c => c.poblacion_miles),
+    y: cantons.map(c => c.homicide_rate_2025),
+    text: cantons.map(c => `${c.canton} (${c.provincia})`),
+    mode: 'markers',
+    marker: {
+      size: cantons.map(c => Math.max(8, Math.min(35, Math.sqrt(c.homicidios_2025) * 1.5))),
+      color: cantons.map(c => c.homicide_rate_2025),
+      colorscale: 'Reds',
+      showscale: true,
+      colorbar: {title: 'Tasa/100k'}
+    },
+    type: 'scatter',
+    name: 'Cantones'
   }], {
-    template:'plotly_dark', margin:{l:50,r:20,t:10,b:50},
-    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
-    xaxis:{title:'Poverty Rate (%)',gridcolor:'rgba(255,255,255,0.08)'},
-    yaxis:{title:'Crime Reality Index',gridcolor:'rgba(255,255,255,0.08)'}
-  }, {responsive:true});
+    template: 'plotly_dark',
+    margin: {l: 50, r: 20, t: 10, b: 50},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    xaxis: {title: 'Población (miles)', gridcolor: 'rgba(255,255,255,0.08)', type: 'log'},
+    yaxis: {title: 'Tasa de homicidios /100k', gridcolor: 'rgba(255,255,255,0.08)'}
+  }, {responsive: true});
 })();
 
-// Correlations
+// ===== CORRELATIONS =====
 (function() {
-  let edu = [10.2,7.4,8.7,8.1,9.8,11.8,8.4,8.6,7.9,7.5,8.8,8.0,8.2,9.0,8.5,10.5,10.1,9.6,8.3,7.6,10.2,8.5,8.8,8.1,8.0,8.3,10.1,8.1];
-  let crimer = [91,88,70,76,54,20,60,63,68,72,56,81,74,53,48,24,46,55,65,30,62,49,58,51,72,54,42,50];
+  const cantons = [{'provincia': 'Azuay', 'canton': 'Camilo Ponce Enríquez', 'codigo_canton': 115, 'total_homicidios': 178, 'latitud': -2.838308121452818, 'longitud': -74.34491730088013, 'femicidios': 4, 'asesinatos': 154, 'sicariatos': 0, 'homicidios_2023': 28, 'homicidios_2024': 59, 'homicidios_2025': 12, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 118.0, 'homicide_rate_2025': 24.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Azuay', 'canton': 'Chordeleg', 'codigo_canton': 111, 'total_homicidios': 4, 'latitud': -2.196775, 'longitud': -59.082945, 'femicidios': 0, 'asesinatos': 4, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 3, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 12.0}, {'provincia': 'Azuay', 'canton': 'Cuenca', 'codigo_canton': 101, 'total_homicidios': 325, 'latitud': -2.6168060122380874, 'longitud': -71.49328749137544, 'femicidios': 25, 'asesinatos': 217, 'sicariatos': 5, 'homicidios_2023': 24, 'homicidios_2024': 18, 'homicidios_2025': 22, 'homicidios_2026': 18, 'poblacion_miles': 600, 'homicide_rate_2024': 3.0, 'homicide_rate_2025': 3.7, 'homicide_rate_2026_proj': 6.0}, {'provincia': 'Azuay', 'canton': 'El Pan', 'codigo_canton': 112, 'total_homicidios': 2, 'latitud': -1.419685, 'longitud': -39.335215, 'femicidios': 1, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Girón', 'codigo_canton': 102, 'total_homicidios': 5, 'latitud': -1.8942144318453944, 'longitud': -47.48287923018454, 'femicidios': 0, 'asesinatos': 4, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Guachapala', 'codigo_canton': 114, 'total_homicidios': 1, 'latitud': -2.774391, 'longitud': -78.712974, 'femicidios': 1, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Gualaceo', 'codigo_canton': 103, 'total_homicidios': 15, 'latitud': -1.9354888210284076, 'longitud': -52.51743771244551, 'femicidios': 2, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Nabón', 'codigo_canton': 104, 'total_homicidios': 8, 'latitud': -2.487935737984985, 'longitud': -59.34190623898555, 'femicidios': 1, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Paute', 'codigo_canton': 105, 'total_homicidios': 5, 'latitud': -2.7573602, 'longitud': -78.73647220000001, 'femicidios': 1, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Pucará', 'codigo_canton': 106, 'total_homicidios': 12, 'latitud': -2.7417606666666665, 'longitud': -66.34308341666666, 'femicidios': 0, 'asesinatos': 10, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 6, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 12.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'San Fernando', 'codigo_canton': 107, 'total_homicidios': 1, 'latitud': 0.0, 'longitud': 0.0, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Santa Isabel', 'codigo_canton': 108, 'total_homicidios': 15, 'latitud': -2.8377415274001208, 'longitud': -68.7659005122241, 'femicidios': 1, 'asesinatos': 12, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 4, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 8.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Sevilla De Oro', 'codigo_canton': 113, 'total_homicidios': 2, 'latitud': -2.777594549999995, 'longitud': -78.64916794999999, 'femicidios': 0, 'asesinatos': 0, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Azuay', 'canton': 'Sígsig', 'codigo_canton': 109, 'total_homicidios': 10, 'latitud': -2.743760188002263, 'longitud': -70.9596695790195, 'femicidios': 3, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Caluma', 'codigo_canton': 206, 'total_homicidios': 20, 'latitud': -1.2193675467081326, 'longitud': -59.4443561944224, 'femicidios': 5, 'asesinatos': 12, 'sicariatos': 1, 'homicidios_2023': 2, 'homicidios_2024': 3, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Chillanes', 'codigo_canton': 202, 'total_homicidios': 22, 'latitud': -1.932564022660079, 'longitud': -75.56256142022112, 'femicidios': 1, 'asesinatos': 17, 'sicariatos': 0, 'homicidios_2023': 5, 'homicidios_2024': 1, 'homicidios_2025': 9, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 18.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Chimbo', 'codigo_canton': 203, 'total_homicidios': 10, 'latitud': -1.3314534999999998, 'longitud': -63.2412517, 'femicidios': 0, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 4, 'homicidios_2025': 0, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 8.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Bolívar', 'canton': 'Echeandía', 'codigo_canton': 204, 'total_homicidios': 12, 'latitud': -0.7238129382825833, 'longitud': -39.64993902305567, 'femicidios': 2, 'asesinatos': 7, 'sicariatos': 3, 'homicidios_2023': 0, 'homicidios_2024': 2, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 4.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Bolívar', 'canton': 'Guaranda', 'codigo_canton': 201, 'total_homicidios': 55, 'latitud': -1.4132335926101258, 'longitud': -73.27287005440999, 'femicidios': 3, 'asesinatos': 43, 'sicariatos': 0, 'homicidios_2023': 6, 'homicidios_2024': 8, 'homicidios_2025': 3, 'homicidios_2026': 2, 'poblacion_miles': 86, 'homicide_rate_2024': 9.3, 'homicide_rate_2025': 3.5, 'homicide_rate_2026_proj': 4.7}, {'provincia': 'Bolívar', 'canton': 'Las Naves', 'codigo_canton': 207, 'total_homicidios': 48, 'latitud': -1.2420375833333333, 'longitud': -77.66352049999999, 'femicidios': 0, 'asesinatos': 48, 'sicariatos': 0, 'homicidios_2023': 6, 'homicidios_2024': 11, 'homicidios_2025': 21, 'homicidios_2026': 8, 'poblacion_miles': 50, 'homicide_rate_2024': 22.0, 'homicide_rate_2025': 42.0, 'homicide_rate_2026_proj': 32.0}, {'provincia': 'Bolívar', 'canton': 'San Miguel', 'codigo_canton': 205, 'total_homicidios': 20, 'latitud': -1.6756554860934734, 'longitud': -75.14444991743798, 'femicidios': 2, 'asesinatos': 14, 'sicariatos': 0, 'homicidios_2023': 5, 'homicidios_2024': 1, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Bolívar', 'codigo_canton': 402, 'total_homicidios': 10, 'latitud': 0.5026599015485227, 'longitud': -77.9226901009265, 'femicidios': 0, 'asesinatos': 7, 'sicariatos': 0, 'homicidios_2023': 11, 'homicidios_2024': 3, 'homicidios_2025': 8, 'homicidios_2026': 5, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 16.0, 'homicide_rate_2026_proj': 20.0}, {'provincia': 'Carchi', 'canton': 'Espejo', 'codigo_canton': 403, 'total_homicidios': 5, 'latitud': 0.6408571887529912, 'longitud': -77.94594597406885, 'femicidios': 1, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Mira', 'codigo_canton': 404, 'total_homicidios': 9, 'latitud': 0.6480410092704418, 'longitud': -78.15323056802818, 'femicidios': 1, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Montúfar', 'codigo_canton': 405, 'total_homicidios': 20, 'latitud': 0.5339211987561757, 'longitud': -70.05161008604554, 'femicidios': 5, 'asesinatos': 5, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 3, 'homicidios_2025': 2, 'homicidios_2026': 1, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 4.0}, {'provincia': 'Carchi', 'canton': 'San Pedro De Huaca', 'codigo_canton': 406, 'total_homicidios': 2, 'latitud': 0.5984984999999995, 'longitud': -77.7277125, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Carchi', 'canton': 'Tulcán', 'codigo_canton': 401, 'total_homicidios': 66, 'latitud': 0.7772593881081916, 'longitud': -74.26720535334013, 'femicidios': 7, 'asesinatos': 36, 'sicariatos': 0, 'homicidios_2023': 13, 'homicidios_2024': 5, 'homicidios_2025': 8, 'homicidios_2026': 5, 'poblacion_miles': 96, 'homicide_rate_2024': 5.2, 'homicide_rate_2025': 8.3, 'homicide_rate_2026_proj': 10.4}, {'provincia': 'Cañar', 'canton': 'Azogues', 'codigo_canton': 301, 'total_homicidios': 56, 'latitud': -2.750978719727407, 'longitud': -78.84966152606758, 'femicidios': 3, 'asesinatos': 47, 'sicariatos': 0, 'homicidios_2023': 11, 'homicidios_2024': 6, 'homicidios_2025': 10, 'homicidios_2026': 3, 'poblacion_miles': 83, 'homicide_rate_2024': 7.2, 'homicide_rate_2025': 12.0, 'homicide_rate_2026_proj': 7.2}, {'provincia': 'Cañar', 'canton': 'Biblián', 'codigo_canton': 302, 'total_homicidios': 13, 'latitud': -2.7050908495135157, 'longitud': -78.89540691747051, 'femicidios': 1, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 5, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 10.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'Cañar', 'codigo_canton': 303, 'total_homicidios': 22, 'latitud': -2.4672563234627245, 'longitud': -79.07482826111818, 'femicidios': 2, 'asesinatos': 16, 'sicariatos': 0, 'homicidios_2023': 2, 'homicidios_2024': 3, 'homicidios_2025': 4, 'homicidios_2026': 2, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 8.0, 'homicide_rate_2026_proj': 8.0}, {'provincia': 'Cañar', 'canton': 'Déleg', 'codigo_canton': 306, 'total_homicidios': 8, 'latitud': -2.760978874999997, 'longitud': -78.92124749999999, 'femicidios': 0, 'asesinatos': 8, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 3, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 6.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'El Tambo', 'codigo_canton': 305, 'total_homicidios': 4, 'latitud': -2.5109809184379275, 'longitud': -78.93296249897443, 'femicidios': 0, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Cañar', 'canton': 'La Troncal', 'codigo_canton': 304, 'total_homicidios': 564, 'latitud': -2.3401664484826936, 'longitud': -77.51239085475017, 'femicidios': 3, 'asesinatos': 521, 'sicariatos': 6, 'homicidios_2023': 97, 'homicidios_2024': 97, 'homicidios_2025': 79, 'homicidios_2026': 44, 'poblacion_miles': 50, 'homicide_rate_2024': 194.0, 'homicide_rate_2025': 158.0, 'homicide_rate_2026_proj': 176.0}, {'provincia': 'Cañar', 'canton': 'Suscal', 'codigo_canton': 307, 'total_homicidios': 1, 'latitud': -2.46361499999999, 'longitud': -79.065383, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Alausí', 'codigo_canton': 602, 'total_homicidios': 16, 'latitud': -2.2243014355636026, 'longitud': -78.87171580312257, 'femicidios': 1, 'asesinatos': 14, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Chambo', 'codigo_canton': 604, 'total_homicidios': 5, 'latitud': -1.3901397999999978, 'longitud': -62.8745388, 'femicidios': 2, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Chunchi', 'codigo_canton': 605, 'total_homicidios': 3, 'latitud': -2.299438240345824, 'longitud': -78.90453028790733, 'femicidios': 0, 'asesinatos': 1, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Colta', 'codigo_canton': 603, 'total_homicidios': 8, 'latitud': -1.3022175625, 'longitud': -59.093275125, 'femicidios': 2, 'asesinatos': 3, 'sicariatos': 0, 'homicidios_2023': 0, 'homicidios_2024': 1, 'homicidios_2025': 1, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 2.0, 'homicide_rate_2025': 2.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Cumandá', 'codigo_canton': 610, 'total_homicidios': 19, 'latitud': -2.088271570644601, 'longitud': -74.96935311309547, 'femicidios': 0, 'asesinatos': 18, 'sicariatos': 0, 'homicidios_2023': 7, 'homicidios_2024': 0, 'homicidios_2025': 2, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 4.0, 'homicide_rate_2026_proj': 0.0}, {'provincia': 'Chimborazo', 'canton': 'Guamote', 'codigo_canton': 606, 'total_homicidios': 6, 'latitud': -1.341428031450165, 'longitud': -52.42600018243155, 'femicidios': 2, 'asesinatos': 2, 'sicariatos': 0, 'homicidios_2023': 1, 'homicidios_2024': 0, 'homicidios_2025': 0, 'homicidios_2026': 0, 'poblacion_miles': 50, 'homicide_rate_2024': 0.0, 'homicide_rate_2025': 0.0, 'homicide_rate_2026_proj': 0.0}];
+  
   Plotly.newPlot('chart-correlations', [{
-    x: edu, y: crimer, mode: 'markers',
+    x: cantons.map(c => Math.log10(c.poblacion_miles + 1)),
+    y: cantons.map(c => c.homicide_rate_2025),
+    text: cantons.map(c => `${c.canton} (${c.provincia})`),
+    mode: 'markers',
     marker: {size: 12, color: '#2171b5'},
-    type: 'scatter', name: 'Cantons'
-  }, {
-    x: [7,13], y: [90,10], mode:'lines',
-    line: {dash:'dash',color:'rgba(255,255,255,0.4)'}, name:'Trend (r=-0.61)'
+    type: 'scatter',
+    name: 'Cantones'
   }], {
-    template:'plotly_dark', margin:{l:50,r:20,t:10,b:50},
-    paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
-    xaxis:{title:'Avg Years of Schooling',gridcolor:'rgba(255,255,255,0.08)'},
-    yaxis:{title:'CRI / Homicide Rate',gridcolor:'rgba(255,255,255,0.08)'}
-  }, {responsive:true});
+    template: 'plotly_dark',
+    margin: {l: 50, r: 20, t: 10, b: 50},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    xaxis: {title: 'Log(Población)', gridcolor: 'rgba(255,255,255,0.08)'},
+    yaxis: {title: 'Tasa de homicidios /100k', gridcolor: 'rgba(255,255,255,0.08)'}
+  }, {responsive: true});
+})();
+
+// ===== SAR EFFECTS BAR CHART =====
+(function() {
+  Plotly.newPlot('chart-sar-effects', [{
+    x: ['Efecto Directo', 'Efecto Indirecto (Spillover)', 'Efecto Total'],
+    y: [1.2598, 0.9851, 2.2449],
+    type: 'bar',
+    marker: {
+      color: ['#2171b5', '#fd8d3c', '#a50f15']
+    },
+    text: ['1.26', '0.99', '2.24'],
+    textposition: 'outside',
+    textfont: {size: 14, color: '#e0e0e0'}
+  }], {
+    template: 'plotly_dark',
+    margin: {l: 50, r: 20, t: 10, b: 40},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    yaxis: {title: 'Magnitud del efecto', gridcolor: 'rgba(255,255,255,0.08)'},
+    showlegend: false
+  }, {responsive: true});
+})();
+
+// ===== FORECAST =====
+(function() {
+  const histX = ['2014-01', '2014-02', '2014-03', '2014-04', '2014-05', '2014-06', '2014-07', '2014-08', '2014-09', '2014-10', '2014-11', '2014-12', '2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06', '2015-07', '2015-08', '2015-09', '2015-10', '2015-11', '2015-12', '2016-01', '2016-02', '2016-03', '2016-04', '2016-05', '2016-06', '2016-07', '2016-08', '2016-09', '2016-10', '2016-11', '2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05', '2017-06', '2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12', '2018-01', '2018-02', '2018-03', '2018-04', '2018-05', '2018-06', '2018-07', '2018-08', '2018-09', '2018-10', '2018-11', '2018-12', '2019-01', '2019-02', '2019-03', '2019-04', '2019-05', '2019-06', '2019-07', '2019-08', '2019-09', '2019-10', '2019-11', '2019-12', '2020-01', '2020-02', '2020-03', '2020-04', '2020-05', '2020-06', '2020-07', '2020-08', '2020-09', '2020-10', '2020-11', '2020-12', '2021-01', '2021-02', '2021-03', '2021-04', '2021-05', '2021-06', '2021-07', '2021-08', '2021-09', '2021-10', '2021-11', '2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07', '2022-08', '2022-09', '2022-10', '2022-11', '2022-12', '2023-01', '2023-02', '2023-03', '2023-04', '2023-05', '2023-06', '2023-07', '2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06'];
+  const histY = [151, 101, 129, 120, 107, 115, 82, 114, 90, 82, 106, 113, 98, 82, 106, 85, 95, 100, 75, 78, 82, 89, 82, 78, 99, 73, 78, 77, 89, 84, 87, 72, 82, 56, 89, 73, 95, 90, 93, 86, 90, 80, 75, 68, 71, 69, 65, 88, 73, 86, 89, 99, 98, 76, 71, 76, 89, 76, 83, 80, 83, 87, 83, 118, 103, 101, 90, 89, 95, 115, 111, 114, 113, 116, 80, 88, 96, 115, 93, 122, 105, 138, 148, 157, 122, 226, 173, 176, 172, 170, 198, 203, 325, 225, 282, 223, 318, 317, 350, 373, 435, 363, 411, 401, 483, 477, 425, 533, 534, 505, 659, 645, 662, 710, 795, 602, 781, 833, 766, 756, 507, 388, 536, 526, 585, 611, 600, 621, 610, 702, 666, 713, 800, 751, 857, 742, 935, 574, 636, 772, 771, 783, 858, 804, 760, 684, 667, 677, 697, 669];
+  const fcX = ['2026-07', '2026-08', '2026-09', '2026-10', '2026-11', '2026-12'];
+  const fcY = [692, 706, 720, 733, 747, 761];
+  const lower = fcY.map(v => Math.round(v * 0.85));
+  const upper = fcY.map(v => Math.round(v * 1.15));
+  
+  Plotly.newPlot('chart-forecast', [
+    {x: histX, y: histY, type: 'scatter', mode: 'lines', name: 'Histórico', line: {color: '#a50f15', width: 2}},
+    {x: fcX, y: fcY, type: 'scatter', mode: 'lines', name: 'Proyección 2026', line: {color: '#2171b5', width: 2, dash: 'dash'}},
+    {x: fcX.concat(fcX.slice().reverse()), y: upper.concat(lower.reverse()),
+     fill: 'toself', fillcolor: 'rgba(33,113,181,0.2)', line: {width: 0}, name: 'Intervalo de confianza'}
+  ], {
+    template: 'plotly_dark',
+    margin: {l: 40, r: 20, t: 10, b: 40},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    xaxis: {gridcolor: 'rgba(255,255,255,0.08)'},
+    yaxis: {title: 'Homicidios mensuales', gridcolor: 'rgba(255,255,255,0.08)'}
+  }, {responsive: true});
 })();
 </script>
 

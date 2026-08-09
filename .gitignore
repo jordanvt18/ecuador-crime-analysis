@@ -1,4 +1,9 @@
-# Data folder
+# Data folder - raw XLSX files are too large for git
+data/raw/*.xlsx
+data/raw/*.csv
+
+# Keep processed data
+!data/processed/
 
 # Python
 __pycache__/
